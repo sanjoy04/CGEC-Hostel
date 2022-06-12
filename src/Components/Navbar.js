@@ -17,7 +17,6 @@ export default function Navbar_() {
   };
 
   return (
-
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
@@ -52,7 +51,7 @@ export default function Navbar_() {
       {/* Login Madal */}
       <Modal centered show={show1} onHide={handleCloseLogin} animation={true}>
         <Modal.Header closeButton>
-          <Modal.Title >Login</Modal.Title>
+          <Modal.Title>Login</Modal.Title>
         </Modal.Header>
         <Form style={styles.form1style}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -68,20 +67,32 @@ export default function Navbar_() {
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
           <div className="d-grid gap-10" onClick={handleCloseLogin}>
-            <Button variant="primary" type="submit" size="mg" >
+            <Button variant="primary" type="submit" size="mg">
               Submit
             </Button>
           </div>
           <Form.Text className="text-muted">
-            Don't have an account? <Link to onClick={handleShowRegister}>Register</Link>
+            Don't have an account?{" "}
+            <Link to onClick={handleShowRegister}>
+              Register
+            </Link>
           </Form.Text>
         </Form>
       </Modal>
 
       {/* Register modal */}
+<<<<<<< HEAD
       <Modal centered show={show2} size="lg" onHide={handleShowRegister} animation={true}>
+=======
+      <Modal
+        show={show2}
+        size="lg"
+        onHide={handleShowRegister}
+        animation={true}
+      >
+>>>>>>> 79d1147b3ab67bf4537198681943cbb5bbaa13ad
         <Modal.Header closeButton>
-          <Modal.Title >Register</Modal.Title>
+          <Modal.Title>Register</Modal.Title>
         </Modal.Header>
         <Form style={styles.form2style}>
           {/* name of the form */}
@@ -101,7 +112,7 @@ export default function Navbar_() {
             <Form.Label>Roll No</Form.Label>
             <Form.Control type="number" placeholder="Enter roll no" />
           </Form.Group>
-          <div >
+          <div>
             {/* Year of the form */}
             <Form.Group className="mb-3" controlId="text">
               <Form.Label>Year</Form.Label>
@@ -130,17 +141,13 @@ export default function Navbar_() {
             <Form.Control type="password" placeholder="Confirm Password" />
           </Form.Group>
           <div className="d-grid gap-10" onClick={handleCloseRegister}>
-            <Button variant="primary" type="submit" size="mg" >
+            <Button variant="primary" type="submit" size="mg">
               Register
             </Button>
           </div>
-
         </Form>
       </Modal>
-
     </>
-
-
   );
 }
 const styles = {
@@ -151,7 +158,6 @@ const styles = {
     fontFamily: "sans-serif",
     fontSize: "16px",
     color: "#424242",
-
   },
   form2style: {
     AlignItems: "center",
@@ -160,7 +166,5 @@ const styles = {
     fontFamily: "sans-serif",
     fontSize: "16px",
     color: "#424242",
-
-
-  }
-}
+  },
+};
