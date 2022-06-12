@@ -11,14 +11,22 @@ export default function Navbar_() {
   const handleShowLogin = () => setShow1(true);
 
   const handleCloseRegister = () => setShow2(false);
-  const handleShowRegister = () => setShow2(true);
+
+  const handleShowRegister = () => {
+    setShow2(true);
+  };
 
   return (
 
     <>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Sukanta Chhatrabas</Navbar.Brand>
+          <Navbar.Brand href="#home">
+            <Link to={'/'} className="link">
+              Sukanta Chhatrabas
+            </Link>
+
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="right_align" id="responsive-navbar-nav">
             <Nav className="nav_elements">
@@ -42,7 +50,7 @@ export default function Navbar_() {
         </Container>
       </Navbar>
       {/* Login Madal */}
-      <Modal show={show1} onHide={handleCloseLogin} animation={true}>
+      <Modal centered show={show1} onHide={handleCloseLogin} animation={true}>
         <Modal.Header closeButton>
           <Modal.Title >Login</Modal.Title>
         </Modal.Header>
@@ -69,8 +77,9 @@ export default function Navbar_() {
           </Form.Text>
         </Form>
       </Modal>
+
       {/* Register modal */}
-      <Modal show={show2} size="lg" onHide={handleShowRegister} animation={true}>
+      <Modal centered show={show2} size="lg" onHide={handleShowRegister} animation={true}>
         <Modal.Header closeButton>
           <Modal.Title >Register</Modal.Title>
         </Modal.Header>
