@@ -81,16 +81,7 @@ export default function Navbar_() {
       </Modal>
 
       {/* Register modal */}
-<<<<<<< HEAD
       <Modal centered show={show2} size="lg" onHide={handleShowRegister} animation={true}>
-=======
-      <Modal
-        show={show2}
-        size="lg"
-        onHide={handleShowRegister}
-        animation={true}
-      >
->>>>>>> 79d1147b3ab67bf4537198681943cbb5bbaa13ad
         <Modal.Header closeButton>
           <Modal.Title>Register</Modal.Title>
         </Modal.Header>
