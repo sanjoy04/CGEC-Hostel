@@ -1,16 +1,16 @@
 // import './App.css';
 import { useEffect } from "react";
-import Navbar from '../Components/Navbar';
+import Navbar from "../Components/Navbar";
 
 function Home() {
-    useEffect(() => {
-        document.title = "Welcome to CGEC Boys Hostel";
-    })
-    return (
-        <div className="App">
-<h1>Home</h1>
-        </div>
-    );
+  useEffect(() => {
+    document.title = "Welcome to CGEC Boys Hostel";
+  });
+  return (
+    <div className="App">
+      <h1>Home</h1>
+    </div>
+  );
 }
 
 export default Home;
