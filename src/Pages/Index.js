@@ -1,19 +1,20 @@
-// import './App.css';
 
+import '../App.css';
 import { useEffect } from "react";
-import Navbar from "../Components/Navbar";
+import Navbar_ from '../Components/Navbar';
 
 function Index() {
-    useEffect(() => {
-        document.title = "Welcome to CGEC Boys Hostel";
-    })
-    return (
-        
-        <div className="App">
-            <Navbar />
+  useEffect(() => {
+    document.title = "Welcome to CGEC Boys Hostel";
+  });
+  return (
+    <div className="App">
+      <Navbar_/>
+      <div className="parallax"></div>
+    </div>
+    
+  );
 
-        </div>
-    );
 }
 
 export default Index;
