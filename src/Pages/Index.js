@@ -1,18 +1,19 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect } from "react";
-import Navbar from './Components/Navbar';
+// import './App.css';
 
-function App() {
+import { useEffect } from "react";
+import Navbar from "../Components/Navbar";
+
+function Index() {
     useEffect(() => {
         document.title = "Welcome to CGEC Boys Hostel";
     })
     return (
+        
         <div className="App">
-            <Navbar/>
-        hi hello
+            <Navbar />
+
         </div>
     );
 }
 
-export default App;
+export default Index;
