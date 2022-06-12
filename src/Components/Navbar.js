@@ -6,12 +6,22 @@ export default function Navbar_() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">Sukanta Chhatrabas</Navbar.Brand>
+        <Navbar.Brand>
+          <Link className="link" to={"/"}>
+            Sukanta Chhatrabas
+          </Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="right_align" id="responsive-navbar-nav">
           <Nav className="nav_elements">
             <Nav.Link>
-              <Link className="link" to={"/About"}>
+              <Link
+                className="link"
+                state={{
+                  pathname: "/about",
+                  name: "Dipantan"
+                }}
+                to={"/About"}>
                 About
               </Link>
             </Nav.Link>
