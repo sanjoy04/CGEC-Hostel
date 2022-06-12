@@ -1,4 +1,14 @@
 .nav_bar{
     display: flex;
     position: fixed;
+    float: right;
+}
+
+.right_align{
+    justify-content: flex-end;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
 }

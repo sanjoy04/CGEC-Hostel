@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Nav, Navbar, Container, Modal, Button,Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import './Nav.css'
+import "./Nav.css";
 
 export default function Navbar_() {
   const [show, setShow] = useState(false);
@@ -9,6 +9,7 @@ export default function Navbar_() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
+<<<<<<< HEAD
     <>
 
 
@@ -58,6 +59,33 @@ export default function Navbar_() {
     </Modal>
     </>
     
+=======
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand href="#home">Sukanta Chhatrabas</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse className="right_align" id="responsive-navbar-nav">
+          <Nav className="nav_elements">
+            <Nav.Link>
+              <Link className="link" to={"/About"}>
+                About
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link className="link" to={"/Contact"}>
+                Contact
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link className="link" to={"/"}>
+                Login/Register
+              </Link>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+>>>>>>> 0e02f7fdb561e0948c7ee81b3c1cf0a04872381a
   );
 }
 const styles = {
