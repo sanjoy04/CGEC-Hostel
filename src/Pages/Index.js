@@ -2,6 +2,7 @@
 import '../App.css';
 import { useEffect } from "react";
 import Navbar_ from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 function Index() {
   useEffect(() => {
@@ -11,6 +12,7 @@ function Index() {
     <div className="App">
       <Navbar_/>
       <div className="parallax"></div>
+
     </div>
     
   );

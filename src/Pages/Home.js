@@ -1,6 +1,7 @@
 // import './App.css';
 import { useEffect } from "react";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 function Home() {
   useEffect(() => {
@@ -8,7 +9,9 @@ function Home() {
   });
   return (
     <div className="App">
+      <Navbar />
       <h1>Home</h1>
+      <Footer />
     </div>
   );
 }

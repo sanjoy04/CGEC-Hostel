@@ -18,7 +18,7 @@ export default function Navbar_() {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">
             <Link to={'/'} className="link">
