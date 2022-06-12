@@ -1,17 +1,18 @@
-.nav_bar{
+.nav_bar {
     display: flex;
     position: fixed;
     float: right;
 }
 
-.right_align{
+.right_align {
     justify-content: flex-end;
 }
 
-.link{
+.link {
     text-decoration: none;
     color: white;
 }
-.link:hover{
+
+.link:hover {
     color: #ffc107;
 }
