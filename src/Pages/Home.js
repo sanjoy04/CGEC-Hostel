@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import { useEffect } from "react";
 
 function Home() {
@@ -7,7 +7,7 @@ function Home() {
     })
     return (
         <div className="App">
-
+<h1>Home</h1>
         </div>
     );
 }
