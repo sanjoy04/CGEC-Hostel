@@ -1,5 +1,6 @@
 import '../App.css';
 import { useEffect } from "react";
+import Navbar_ from '../Components/Navbar';
 
 function Index() {
   useEffect(() => {
@@ -7,7 +8,7 @@ function Index() {
   });
   return (
     <div className="App">
-      <h1>Index</h1>
+      <Navbar_/>
       <div className="parallax"></div>
     </div>
     
