@@ -4,17 +4,6 @@ import "./Nav.css";
 
 export default function Navbar_() {
   return (
-<<<<<<< HEAD
-    <Navbar style={{ display: 'flex' }} collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container style={{ display: 'flex', flexDirection: 'row' }}>
-        <Navbar.Brand><Link to={'index'}>CGEC - HOSTEL</Link></Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse className="nav_bar" id="responsive-navbar-nav">
-          <Link to={"/About"}>About</Link>
-          <Link to={"/Contact"}>Contact</Link>
-          <Link to={""}>Login</Link>
-          <Link to={""}>signup</Link>
-=======
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand href="#home">Sukanta Chhatrabas</Navbar.Brand>
@@ -37,7 +26,6 @@ export default function Navbar_() {
               </Link>
             </Nav.Link>
           </Nav>
->>>>>>> 63673bdc328cf11c62210a09ea58a687376afe77
         </Navbar.Collapse>
       </Container>
     </Navbar>
