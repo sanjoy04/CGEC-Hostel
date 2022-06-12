@@ -1,6 +1,9 @@
 import '../App.css';
 import { useEffect } from "react";
+import Navbar from '../Components/Navbar';
+
 import { useLocation } from 'react-router-dom'
+
 
 
 function About() {

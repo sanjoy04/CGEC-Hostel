@@ -1,5 +1,6 @@
 // import './App.css';
 import { useEffect } from "react";
+import Navbar from '../Components/Navbar';
 
 function Contact() {
     useEffect(() => {

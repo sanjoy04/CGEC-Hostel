@@ -1,3 +1,4 @@
+
 import '../App.css';
 import { useEffect } from "react";
 import Navbar_ from '../Components/Navbar';
@@ -13,6 +14,7 @@ function Index() {
     </div>
     
   );
+
 }
 
 export default Index;

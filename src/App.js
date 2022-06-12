@@ -1,6 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect } from "react";
+import Navbar from './Components/Navbar';
 
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -15,6 +16,7 @@ function App() {
         document.title = "Welcome to CGEC Boys Hostel";
     })
     return (
+
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Index />} />
@@ -25,6 +27,7 @@ function App() {
                 <Route path="/*" element={<Index />} />
             </Routes>
         </BrowserRouter>
+
     );
 }
 
