@@ -1,16 +1,16 @@
+import '../App.css';
 import "../App.css";
-import { useEffect } from "react";
+import Footer from '../Components/Footer';
 import Navbar from "../Components/Navbar";
 
-import { useLocation } from "react-router-dom";
-
 function About() {
-  return (
-    <div className="App">
-      <Navbar />
-      <h1>About</h1>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Navbar />
+            <h1>About</h1>
+            <Footer/>
+        </div>
+    );
 }
 
 export default About;

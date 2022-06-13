@@ -99,7 +99,7 @@ export default function Navbar_() {
             <Form.Label>Roll No</Form.Label>
             <Form.Control type="numeric" placeholder="Enter roll no" />
           </Form.Group>
-          <div class="d-flex .flex-row justify-content-lg-between">
+          <div class="d-flex .flex-xxl-row justify-content--between">
             {/* Year of the form */}
             <Form.Group className="mb-1" controlId="text">
               <Form.Label>Year</Form.Label>
@@ -127,7 +127,7 @@ export default function Navbar_() {
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control type="password" placeholder="Confirm Password" />
           </Form.Group>
-          <div className="d-grid" onClick={handleCloseRegister}>
+          <div className="d-grid gap-10" onClick={handleCloseRegister}>
             <Button variant="primary" type="submit" size="mg">
               Register
             </Button>
@@ -153,8 +153,6 @@ const styles = {
     fontFamily: "sans-serif",
     fontSize: "16px",
     color: "#424242",
-    marginBottom: "5px",
-
     
   },
 };
