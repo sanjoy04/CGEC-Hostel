@@ -11,21 +11,13 @@ export default function Navbar_() {
   const handleShowLogin = () => setShow1(true);
 
   const handleCloseRegister = () => setShow2(false);
-
-  const handleShowRegister = () => {
-    setShow2(true);
-  };
+  const handleShowRegister = () => setShow2(true);
 
   return (
     <>
-      <Navbar sticky="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">
-            <Link to={'/'} className="link">
-              Sukanta Chhatrabas
-            </Link>
-
-          </Navbar.Brand>
+          <Navbar.Brand href="#home">Sukanta Chhatrabas</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="right_align" id="responsive-navbar-nav">
             <Nav className="nav_elements">
@@ -49,7 +41,7 @@ export default function Navbar_() {
         </Container>
       </Navbar>
       {/* Login Madal */}
-      <Modal centered show={show1} onHide={handleCloseLogin} animation={true}>
+      <Modal show={show1} onHide={handleCloseLogin} animation={true}>
         <Modal.Header closeButton>
           <Modal.Title>Login</Modal.Title>
         </Modal.Header>
@@ -68,7 +60,7 @@ export default function Navbar_() {
           </Form.Group>
           <div className="d-grid gap-10" onClick={handleCloseLogin}>
             <Button variant="primary" type="submit" size="mg">
-              Submit
+              Login
             </Button>
           </div>
           <Form.Text className="text-muted">
@@ -79,55 +71,59 @@ export default function Navbar_() {
           </Form.Text>
         </Form>
       </Modal>
-
       {/* Register modal */}
-      <Modal centered show={show2} size="lg" onHide={handleShowRegister} animation={true}>
+      <Modal
+        show={show2}
+        size="lg"
+        onHide={handleCloseRegister}
+        animation={true}
+      >
         <Modal.Header closeButton>
           <Modal.Title>Register</Modal.Title>
         </Modal.Header>
         <Form style={styles.form2style}>
           {/* name of the form */}
-          <Form.Group className="mb-3" controlId="text">
+          <Form.Group className="mb-1" controlId="text">
             <Form.Label>Name</Form.Label>
             <Form.Control type="text" placeholder="Enter name" />
           </Form.Group>
           {/* email of the form */}
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-1" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="number">
+          <Form.Group className="mb-1" controlId="number">
             <Form.Label>Roll No</Form.Label>
-            <Form.Control type="number" placeholder="Enter roll no" />
+            <Form.Control type="numeric" placeholder="Enter roll no" />
           </Form.Group>
-          <div>
+          <div class="d-flex .flex-xxl-row justify-content--between">
             {/* Year of the form */}
-            <Form.Group className="mb-3" controlId="text">
+            <Form.Group className="mb-1" controlId="text">
               <Form.Label>Year</Form.Label>
               <Form.Control type="text" placeholder="Enter year" />
             </Form.Group>
             {/* Semester of the form */}
-            <Form.Group className="mb-3" controlId="text">
+            <Form.Group className="mb-1" controlId="text">
               <Form.Label>Semester</Form.Label>
               <Form.Control type="text" placeholder="Enter Semester" />
             </Form.Group>
           </div>
           {/* mobile no of the form */}
-          <Form.Group className="mb-3" controlId="number">
+          <Form.Group className="mb-1" controlId="number">
             <Form.Label>Mobile No</Form.Label>
-            <Form.Control type="number" placeholder="Enter mobile no" />
+            <Form.Control type="numeric" placeholder="Enter mobile no" />
           </Form.Group>
           {/* password of the form */}
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-1" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
           {/* Confirm password */}
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-1" controlId="formBasicPassword">
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control type="password" placeholder="Confirm Password" />
           </Form.Group>
@@ -152,10 +148,11 @@ const styles = {
   },
   form2style: {
     AlignItems: "center",
-    padding: "20px",
+    padding: "15px",
     borderRadius: "5px",
     fontFamily: "sans-serif",
     fontSize: "16px",
     color: "#424242",
+    
   },
 };
