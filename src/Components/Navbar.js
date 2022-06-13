@@ -60,7 +60,7 @@ export default function Navbar_() {
           </Form.Group>
           <div className="d-grid gap-10" onClick={handleCloseLogin}>
             <Button variant="primary" type="submit" size="mg">
-              Submit
+              Login
             </Button>
           </div>
           <Form.Text className="text-muted">
@@ -75,7 +75,7 @@ export default function Navbar_() {
       <Modal
         show={show2}
         size="lg"
-        onHide={handleShowRegister}
+        onHide={handleCloseRegister}
         animation={true}
       >
         <Modal.Header closeButton>
@@ -83,51 +83,51 @@ export default function Navbar_() {
         </Modal.Header>
         <Form style={styles.form2style}>
           {/* name of the form */}
-          <Form.Group className="mb-3" controlId="text">
+          <Form.Group className="mb-1" controlId="text">
             <Form.Label>Name</Form.Label>
             <Form.Control type="text" placeholder="Enter name" />
           </Form.Group>
           {/* email of the form */}
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-1" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="number">
+          <Form.Group className="mb-1" controlId="number">
             <Form.Label>Roll No</Form.Label>
-            <Form.Control type="number" placeholder="Enter roll no" />
+            <Form.Control type="numeric" placeholder="Enter roll no" />
           </Form.Group>
-          <div>
+          <div class="d-flex .flex-row justify-content-lg-between">
             {/* Year of the form */}
-            <Form.Group className="mb-3" controlId="text">
+            <Form.Group className="mb-1" controlId="text">
               <Form.Label>Year</Form.Label>
               <Form.Control type="text" placeholder="Enter year" />
             </Form.Group>
             {/* Semester of the form */}
-            <Form.Group className="mb-3" controlId="text">
+            <Form.Group className="mb-1" controlId="text">
               <Form.Label>Semester</Form.Label>
               <Form.Control type="text" placeholder="Enter Semester" />
             </Form.Group>
           </div>
           {/* mobile no of the form */}
-          <Form.Group className="mb-3" controlId="number">
+          <Form.Group className="mb-1" controlId="number">
             <Form.Label>Mobile No</Form.Label>
-            <Form.Control type="number" placeholder="Enter mobile no" />
+            <Form.Control type="numeric" placeholder="Enter mobile no" />
           </Form.Group>
           {/* password of the form */}
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-1" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
           {/* Confirm password */}
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-1" controlId="formBasicPassword">
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control type="password" placeholder="Confirm Password" />
           </Form.Group>
-          <div className="d-grid gap-10" onClick={handleCloseRegister}>
+          <div className="d-grid" onClick={handleCloseRegister}>
             <Button variant="primary" type="submit" size="mg">
               Register
             </Button>
@@ -148,10 +148,13 @@ const styles = {
   },
   form2style: {
     AlignItems: "center",
-    padding: "20px",
+    padding: "15px",
     borderRadius: "5px",
     fontFamily: "sans-serif",
     fontSize: "16px",
     color: "#424242",
+    marginBottom: "5px",
+
+    
   },
 };
