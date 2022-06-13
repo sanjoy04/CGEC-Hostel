@@ -13,14 +13,13 @@ function Contact() {
   return (
     <div className="App">
       <Navbar />
-      <h3>Contact</h3>
-      <Container className="">
+      <Container className="contact-body">
         <Row>
-          <Col>
+          <Col className="col col-md-4">
             <div class="info-content">
               <h4>Address</h4>
               <div class="text">
-                <p></p>
+               
                 <p>Harinchawra,</p>
 
                 <p>
@@ -37,7 +36,7 @@ function Contact() {
               </div>
             </div>
           </Col>
-          <Col>
+          <Col className="col col-md-4">
             <div class="info-content">
               <h4>Phone</h4>
               <div class="text">
@@ -55,7 +54,7 @@ function Contact() {
               </div>
             </div>
           </Col>
-          <Col>
+          <Col className="col col-md-4">
             <div class="info-content">
               <h4>Email</h4>
               <div class="text">
@@ -66,22 +65,11 @@ function Contact() {
           </Col>
         </Row>
         <Row>
-          <Col>
-            {/* <div class="col-md-6">
-              <div id="googlemap" style="width:100%; height:350px;">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14308.096242982443!2d89.4601434!3d26.29332!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe4952b5891bb2389!2sCooch%20Behar%20Government%20Engineering%20College!5e0!3m2!1sen!2sin!4v1630304221764!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style="border:0;"
-                  allowfullscreen=""
-                  loading="lazy"
-                ></iframe>
-              </div>
-            </div> */}
+          <Col className="col col-md-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d947.4095284512034!2d89.46173892637432!3d26.29597633000579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m3!3m2!1d26.296093499999998!2d89.4627278!4m0!5e0!3m2!1sen!2sin!4v1655140945250!5m2!1sen!2sin" height={"400"}></iframe>
           </Col>
-          <Col>
-            <Form>
+          <Col className="col col-md-6">
+            <Form className="form-body">
               <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label>Name</Form.Label>
                 <Form.Control type="text" placeholder="Enter your name" />
@@ -98,7 +86,7 @@ function Contact() {
                 <Form.Label>Your Message</Form.Label>
                 <Form.Control type="text" placeholder="Enter your subject here" />
               </Form.Group>
-              <Button variant="primary" type="submit">
+              <Button className="submit" variant="primary" type="submit">
                 Submit
               </Button>
             </Form>

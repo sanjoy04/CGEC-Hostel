@@ -1,7 +1,30 @@
-.container{
-    padding: 10px;
+.contact-body {
+    padding: 25px;
 }
-.App{
+
+.App {
     height: 500px;
     text-align: justify;
+}
+
+/* 
+.form-body{
+    padding: 10px 80px;
+} */
+
+.submit {
+    align-items: center;
+}
+
+@media (maxWidth: '767px') {
+
+    /* mobile */
+    p {
+        font-size: small!important;
+    }
+}
+
+@media (maxWidth: '991px') {
+    /* tablet */
+
 }

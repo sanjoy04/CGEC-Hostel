@@ -6,6 +6,7 @@ Row,
 Column,
 FooterLink,
 Heading,
+FooterEndText
 } from "./FooterStyles";
 
 const Footer = () => {
@@ -67,7 +68,7 @@ return (
 		</Row>
 	</Container>
     <hr/>
-    <div>Copyright © All Rights Reserved</div>
+<FooterEndText>Copyright © All Rights Reserved | Developed by DST</FooterEndText>
 	</Box>
 );
 };

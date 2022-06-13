@@ -59,3 +59,7 @@ color: #fff;
 margin-bottom: 40px;
 font-weight: bold;
 `;
+
+export const FooterEndText = styled.p`
+	text-align:center;
+`;
