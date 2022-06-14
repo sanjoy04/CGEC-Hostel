@@ -10,6 +10,8 @@ export default function Navbar_() {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
+  const [warning, setWarning] = useState();
+
   const [registerName, setRegisterName] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
@@ -32,7 +34,7 @@ export default function Navbar_() {
   };
 
   function login() {
-
+    console.log(loginEmail, loginPassword);
   }
 
   function signup() {
@@ -69,7 +71,7 @@ export default function Navbar_() {
               </Nav.Link>
               <Nav.Link>
                 <Link className="link" to={"/"} onClick={handleShowLogin}>
-                  Login/Register
+                  <img src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png" height={"30px"} />
                 </Link>
               </Nav.Link>
             </Nav>
@@ -87,20 +89,19 @@ export default function Navbar_() {
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control value={loginEmail} onChange={e => setLoginEmail(e.target.value)} type="email" placeholder="Enter email" />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control value={loginPassword} onChange={e => setLoginPassword(e.target.value)} type="password" placeholder="Password" />
           </Form.Group>
+
           <div className="d-grid gap-10">
-            <Button onClick={login} variant="primary" type="submit" size="mg">
+            <Button onClick={login} variant="primary" size="sm">
               Login
             </Button>
           </div>
+
           <Form.Text className="text-muted d-flex justify-content-center mt-3">
             Don't have an account?{" "}
             <Link to onClick={handleShowRegister}>

@@ -12,15 +12,23 @@
 .link {
     text-decoration: none;
     color: white;
+   
 }
 
 .link:hover {
     color: #ffc107;
 }
-.title{
+
+.title {
     text-decoration: none;
     color: white;
 }
-.title:hover{
+
+.title:hover {
     color: #ffc107;
+}
+
+.nav_elements {
+    display: flex;
+    align-items: center;
 }
