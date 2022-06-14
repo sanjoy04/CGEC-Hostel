@@ -18,14 +18,16 @@ const Slider = () => {
     <div>
       <SimpleImageSlider
       style ={{
-          width: "100%",
+         // width: "100%",
           //height: "50%",
           backgroundColor: "black",
-          paddingTop: "55px",
+          paddingTop: "65px",
+          opacity: "1",
+
         }}
       autoPlay={true}
         width='100%'
-        height={504}
+        height={300}
         images={images}
         showBullets={true}
         showNavs={true}
