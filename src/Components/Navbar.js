@@ -7,14 +7,37 @@ export default function Navbar_() {
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
 
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+
+  const [registerName, setRegisterName] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPhone, setRegisterPhone] = useState("");
+  const [semester, setSemester] = useState("");
+  const [year, setYear] = useState("");
+  const [department, setDepartment] = useState("");
+  const [roll, setRoll] = useState("");
+
   const handleCloseLogin = () => setShow1(false);
-  const handleShowLogin = () => setShow1(true);
+  const handleShowLogin = () => {
+    setShow2(false);
+    setShow1(true)
+  };
 
   const handleCloseRegister = () => setShow2(false);
   const handleShowRegister = () => {
     setShow1(!show1)
     setShow2(true)
   };
+
+  function login() {
+
+  }
+
+  function signup() {
+
+  }
 
   return (
     <>
@@ -53,7 +76,7 @@ export default function Navbar_() {
         <Form style={styles.form1style}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control value={loginEmail} onChange={e => setLoginEmail(e.target.value)} type="email" placeholder="Enter email" />
             <Form.Text className="text-muted">
               We'll never share your email with anyone else.
             </Form.Text>
@@ -61,14 +84,14 @@ export default function Navbar_() {
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control value={loginPassword} onChange={e => setLoginPassword(e.target.value)} type="password" placeholder="Password" />
           </Form.Group>
-          <div className="d-grid gap-10" onClick={handleCloseLogin}>
-            <Button variant="primary" type="submit" size="mg">
+          <div className="d-grid gap-10">
+            <Button onClick={login} variant="primary" type="submit" size="mg">
               Login
             </Button>
           </div>
-          <Form.Text className="text-muted">
+          <Form.Text className="text-muted d-flex justify-content-center mt-3">
             Don't have an account?{" "}
             <Link to onClick={handleShowRegister}>
               Register
@@ -137,16 +160,21 @@ export default function Navbar_() {
             {/* Confirm password */}
             <Form.Group className="mb-1 col col-md-6" controlId="formBasicPassword">
               <Form.Label>Confirm Password</Form.Label>
-              <Form.Control type="password" placeholder="Confirm Password" />
+              <Form.Control onChange={e => console.log(e.target.value)} type="password" placeholder="Confirm Password" />
             </Form.Group>
           </div>
 
-          <div className="d-flex justify-content-center mt-5" onClick={handleCloseRegister}>
+          <div className="d-flex justify-content-center mt-3" onClick={handleCloseRegister}>
             <Button variant="primary" type="submit" size="lg">
               Register
             </Button>
           </div>
-
+          <Form.Text className="text-muted d-flex justify-content-center mt-3">
+            Already have an account?{" "}
+            <Link to onClick={handleShowLogin}>
+              Login
+            </Link>
+          </Form.Text>
         </Form>
       </Modal>
     </>
