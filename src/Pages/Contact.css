@@ -1,5 +1,7 @@
 .contact-body {
     padding: 25px;
+    /* margin-top: 100px; */
+    padding-top: 100px;
 }
 
 .App {
@@ -17,14 +19,9 @@
 }
 
 @media (maxWidth: '767px') {
-
     /* mobile */
-    p {
-        font-size: small!important;
-    }
 }
 
 @media (maxWidth: '991px') {
     /* tablet */
-
 }
