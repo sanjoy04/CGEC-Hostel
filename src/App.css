@@ -1,19 +1,18 @@
 .App {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* The image used */
   background-image: url("./images/hostel2.jpg");
-  /* opacity: 0.5; */
-  /* Set a specific height */
-  /* min-height: 500px; */
-  height: 100vh;
+  height: 100%;
+  
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* height: 50%; */
 }
 
 .App-logo {

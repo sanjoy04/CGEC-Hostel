@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Box = styled.div`
   padding-top: 100px;
   justify-content: flex-end;
+  margin-top: 50px;
   bottom: 0;
   width: 100%;
   @media (max-width: 1000px) {
@@ -21,8 +22,19 @@ export const Container = styled.div`
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: left;
-  margin-left: 60px;
+  text-align: centre;
+  margin-left: 20px;
+  grid-gap: 30px;
+`;
+
+export const OuterRow = styled.div`
+display: grid;
+grid-template-columns: 2fr 1fr;
+grid-gap: 30px;
+
+@media (max-width: 1000px) {
+  grid-template-columns: 1fr;
+}
 `;
 
 export const Row = styled.div`
@@ -35,11 +47,9 @@ export const Row = styled.div`
   }
 `;
 
-export const FooterLink = styled.a`
-  color: #fff;
-  margin-bottom: 20px;
-  font-size: 18px;
-  text-decoration: none;
+export const InnerBox = styled.div`
+  background:white;
+  border:1px solid black;
 
   &:hover {
     color: green;
@@ -52,8 +62,4 @@ export const Heading = styled.p`
   color: #000;
   margin-bottom: 40px;
   font-weight: bold;
-`;
-
-export const FooterEndText = styled.p`
-  text-align: center;
 `;

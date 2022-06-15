@@ -1,4 +1,4 @@
-// import './App.css';
+import "../../App.css";
 import { useEffect } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
@@ -7,12 +7,12 @@ import {
   Container,
   Row,
   Column,
-  FooterLink,
+  OuterRow,
   Heading,
-  FooterEndText,
+  InnerBox,
 } from "./HomeStyle";
 
-import slider1 from "../../images/hostel1.jpg";
+import slider1 from "../../images/MAKAUT.jpg";
 
 function Home() {
   useEffect(() => {
@@ -23,25 +23,54 @@ function Home() {
       <Navbar />
       <Box>
         <Container>
-          <Row>
-            <img src={slider1} />
-          </Row>
-          <Row>
+          <OuterRow>
             <Column>
-              <Heading>Room Change</Heading>
+              <Row>
+                <Column>
+                  <InnerBox>
+                    <Heading>Room Change</Heading>
+                  </InnerBox>
+                </Column>
+                <Column>
+                  <InnerBox>
+                    <Heading>Complaints</Heading>
+                  </InnerBox>
+                </Column>
+                <Column>
+                  <InnerBox>
+                    <Heading>Fooding</Heading>
+                  </InnerBox>
+                </Column>
+              </Row>
+              <Row>
+                <Column>
+                  <InnerBox>
+                    <Heading>Room Change</Heading>
+                  </InnerBox>
+                </Column>
+                <Column>
+                  <InnerBox>
+                    <Heading>Complaints</Heading>
+                  </InnerBox>
+                </Column>
+                <Column>
+                  <InnerBox>
+                    <Heading>Fooding</Heading>
+                  </InnerBox>
+                </Column>
+              </Row>
             </Column>
             <Column>
-              <Heading>Complaints</Heading>
+              <h3>Notice</h3>
+              <Row>Notic</Row>
+              <Row>Notic</Row>
+              <Row>Notic</Row>
+              <Row>Notic</Row>
+              <Row>Notic</Row>
+              <Row>Notic</Row>
             </Column>
-            <Column>
-              <Heading>Fooding</Heading>
-            </Column>
-          </Row>
+          </OuterRow>
         </Container>
-        <hr />
-        <FooterEndText>
-          Copyright © All Rights Reserved | Developed by DST
-        </FooterEndText>
       </Box>
       <Footer />
     </div>
