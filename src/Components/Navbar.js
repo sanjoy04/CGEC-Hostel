@@ -26,6 +26,8 @@ export default function Navbar_() {
   const handleShowLogin = () => {
     setShow2(false);
     setShow1(true)
+    setLoginEmail("");
+    setLoginPassword("")
   };
 
   useEffect(() => {
@@ -39,16 +41,19 @@ export default function Navbar_() {
   const handleShowRegister = () => {
     setShow1(!show1)
     setShow2(true)
+    setLoginEmail("");
+    setLoginPassword("")
   };
 
   function login() {
-    // email validation
+    // email validation regular expression
     if (loginEmail === "") {
       setWarning("Email is required");
       return;
     }
-    if (!loginEmail.includes("@")) {
-      setWarning("Email is invalid");
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!emailRegex.test(loginEmail)) {
+      setWarning("Invalid email");
       return;
     }
     // password validation
@@ -58,7 +63,7 @@ export default function Navbar_() {
     }
 
     // if all is well, send request to server
-    
+
 
   }
 
