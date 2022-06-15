@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Nav, Navbar, Container, Modal, Button, Form } from "react-bootstrap";
+import swal from 'sweetalert';
 import { Link } from "react-router-dom";
 import "./Nav.css";
 
@@ -27,6 +28,13 @@ export default function Navbar_() {
     setShow1(true)
   };
 
+  useEffect(() => {
+    if (warning) {
+      swal("Error", warning, "error");
+      setWarning();
+    }
+  }, [warning]);
+
   const handleCloseRegister = () => setShow2(false);
   const handleShowRegister = () => {
     setShow1(!show1)
@@ -34,7 +42,24 @@ export default function Navbar_() {
   };
 
   function login() {
-    console.log(loginEmail, loginPassword);
+    // email validation
+    if (loginEmail === "") {
+      setWarning("Email is required");
+      return;
+    }
+    if (!loginEmail.includes("@")) {
+      setWarning("Email is invalid");
+      return;
+    }
+    // password validation
+    if (loginPassword === "") {
+      setWarning("Password is required");
+      return;
+    }
+
+    // if all is well, send request to server
+    
+
   }
 
   function signup() {
