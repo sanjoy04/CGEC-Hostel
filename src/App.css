@@ -1,6 +1,19 @@
 .App {
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* The image used */
+  background-image: url("./images/hostel2.jpg");
+  /* opacity: 0.5; */
+  /* Set a specific height */
+  /* min-height: 500px; */
+  height: 100vh;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 50%; */
 }
 
 .App-logo {
@@ -33,25 +46,18 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-
+body {
+  font-size: xx-large;
+}
 
 .parallax {
-  /* The image used */
-  background-image: url("./images/hostel2.jpg");
-
-  /* Set a specific height */
-  /* min-height: 500px; */
-  height: 100vh;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 50%; */
+  height: 60vh;
+  background-color: black;
+  opacity: 0.5;
 }

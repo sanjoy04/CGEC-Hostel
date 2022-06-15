@@ -15,6 +15,7 @@ function Index() {
 
     <div className="App">
       <Navbar_ />
+      <div className='parallax'></div>
       <Slider />
       <Footer />
     </div>
