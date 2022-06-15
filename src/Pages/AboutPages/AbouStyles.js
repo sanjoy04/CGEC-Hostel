@@ -71,8 +71,8 @@ export const People = styled.p`
   }
 `;
 export const Peoples = styled.div`
-  // border: 1px solid #000;
-  // border-radius: 10px;
+  border-radius: 10px;
+  padding-bottom: 5px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
   }
 `;
