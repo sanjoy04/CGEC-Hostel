@@ -7,8 +7,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Index from './Pages/Index';
-import About from './Pages/About';
-import Contact from './Pages/Contact';
+import About from './Pages/AboutPages/About';
+import Contact from './Pages/ContactPages/Contact';
 import Home from './Pages/Home';
 
 function App() {
