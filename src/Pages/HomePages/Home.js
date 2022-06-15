@@ -1,7 +1,7 @@
 // import './App.css';
 import { useEffect } from "react";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+import Navbar from "../../Components/Navbar";
+import Footer from "../../Components/Footer";
 
 function Home() {
   useEffect(() => {
