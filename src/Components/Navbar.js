@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Nav, Navbar, Container, Modal, Button, Form } from "react-bootstrap";
+import swal from 'sweetalert';
 import { Link } from "react-router-dom";
 import "./Nav.css";
 
@@ -25,16 +26,45 @@ export default function Navbar_() {
   const handleShowLogin = () => {
     setShow2(false);
     setShow1(true)
+    setLoginEmail("");
+    setLoginPassword("")
   };
+
+  useEffect(() => {
+    if (warning) {
+      swal("Error", warning, "error");
+      setWarning();
+    }
+  }, [warning]);
 
   const handleCloseRegister = () => setShow2(false);
   const handleShowRegister = () => {
     setShow1(!show1)
     setShow2(true)
+    setLoginEmail("");
+    setLoginPassword("")
   };
 
   function login() {
-    console.log(loginEmail, loginPassword);
+    // email validation regular expression
+    if (loginEmail === "") {
+      setWarning("Email is required");
+      return;
+    }
+    const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!emailRegex.test(loginEmail)) {
+      setWarning("Invalid email");
+      return;
+    }
+    // password validation
+    if (loginPassword === "") {
+      setWarning("Password is required");
+      return;
+    }
+
+    // if all is well, send request to server
+
+
   }
 
   function signup() {
