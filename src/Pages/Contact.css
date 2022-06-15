@@ -9,13 +9,21 @@
     text-align: justify;
 }
 
-/* 
+
 .form-body{
-    padding: 10px 80px;
-} */
+    border: 1px solid #999;
+    border-radius: 10px;
+}
+.body{
+    padding: 15px;
+}
+
 
 .submit {
-    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+
 }
 
 @media (maxWidth: '767px') {
