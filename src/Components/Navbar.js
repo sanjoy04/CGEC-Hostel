@@ -100,7 +100,7 @@ export default function Navbar_() {
                 </Link>
               </Nav.Link>
               <Nav.Link>
-                <Link className="link" to={"/"} onClick={handleShowLogin}>
+                <Link className="link" to={""} onClick={handleShowLogin}>
                   <img src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png" height={"30px"} />
                 </Link>
               </Nav.Link>
