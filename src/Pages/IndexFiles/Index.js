@@ -1,7 +1,7 @@
 import "../../App.css";
 import "./Index.css";
 import { useEffect, useState } from "react";
-import Navbar_ from "../../Components/Navbar";
+import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Slider from "../../Components/Slider";
 
@@ -12,9 +12,9 @@ function Index() {
   });
 
   return (
-    <div className="bg">
-      <Navbar_ />
-      <div className="parallax">
+    <div className="App">
+      <Navbar />
+      {/* <div className="parallax">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga quasi
         aperiam eaque impedit dolor deserunt eos cumque dicta harum! Voluptates,
         quas? Dicta alias labore accusantium quas repudiandae, facere voluptates
@@ -26,7 +26,7 @@ function Index() {
         Ratione qui velit, impedit provident architecto atque consequuntur! Ipsa
         nihil maxime soluta ipsum fugit nostrum id aliquid facilis in,
         voluptatibus deleniti.
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
