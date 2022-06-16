@@ -22,17 +22,14 @@ function About() {
         <AboutTop>
           <Heading1>About the hostel</Heading1>
           <AboutText>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga quasi
-            aperiam eaque impedit dolor deserunt eos cumque dicta harum!
-            Voluptates, quas? Dicta alias labore accusantium quas repudiandae,
-            facere voluptates ex et inventore sed amet sequi non ea molestiae
-            esse. Ex rerum neque nulla, eos facere ratione optio exercitationem
-            reiciendis blanditiis! Aut adipisci sunt ut, quaerat hic alias
-            delectus provident? Aut enim minima veritatis recusandae! Et,
-            blanditiis adipisci dolore neque sit quis sequi magnam iste repellat
-            nostrum perspiciatis asperiores cum? Ratione qui velit, impedit
-            provident architecto atque consequuntur! Ipsa nihil maxime soluta
-            ipsum fugit nostrum id aliquid facilis in, voluptatibus deleniti.
+            A hostel is a place where students live to study or for work. It is
+            usually supervised by a hostel manager and residents. Students
+            living in hostels experience their hostel life. These hostels
+            eventually became their homes. Hostels are primarily built, taking
+            into account the needs of struggling students and working-class
+            officials. It provides people with adequate housing, shelter, and
+            food at affordable prices. The hostel mainly consists of one bed, a
+            room shared by two or three people, a kitchen and a shared bathroom.
           </AboutText>
         </AboutTop>
         <Responsibitity>
