@@ -16,7 +16,11 @@ function Index() {
     <div className="App">
       <Navbar_ />
       <div className='parallax'></div>
+<<<<<<< HEAD
       {/* <Slider /> */}
+=======
+      <Slider />
+>>>>>>> 1e8029b06d1c05b482aa73aac800c04c78a1070d
       <Footer />
     </div>
 

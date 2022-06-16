@@ -1,7 +1,18 @@
-// import './App.css';
+import "../../App.css";
 import { useEffect } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
+import {
+  Box,
+  Container,
+  Row,
+  Column,
+  OuterRow,
+  Heading,
+  InnerBox,
+} from "./HomeStyle";
+
+import slider1 from "../../images/MAKAUT.jpg";
 
 function Home() {
   useEffect(() => {
@@ -10,7 +21,57 @@ function Home() {
   return (
     <div className="App">
       <Navbar />
-      <h1>Home</h1>
+      <Box>
+        <Container>
+          <OuterRow>
+            <Column>
+              <Row>
+                <Column>
+                  <InnerBox>
+                    <Heading>Room Change</Heading>
+                  </InnerBox>
+                </Column>
+                <Column>
+                  <InnerBox>
+                    <Heading>Complaints</Heading>
+                  </InnerBox>
+                </Column>
+                <Column>
+                  <InnerBox>
+                    <Heading>Fooding</Heading>
+                  </InnerBox>
+                </Column>
+              </Row>
+              <Row>
+                <Column>
+                  <InnerBox>
+                    <Heading>Room Change</Heading>
+                  </InnerBox>
+                </Column>
+                <Column>
+                  <InnerBox>
+                    <Heading>Complaints</Heading>
+                  </InnerBox>
+                </Column>
+                <Column>
+                  <InnerBox>
+                    <Heading>Fooding</Heading>
+                  </InnerBox>
+                </Column>
+              </Row>
+            </Column>
+            <Column>
+              <h3>Notice</h3>
+              <Row>Notic</Row>
+              <Row>Notic</Row>
+              <Row>Notic</Row>
+              <Row>Notic</Row>
+              <Row>Notic</Row>
+              <Row>Notic</Row>
+            </Column>
+          </OuterRow>
+        </Container>
+      </Box>
       <Footer />
     </div>
   );

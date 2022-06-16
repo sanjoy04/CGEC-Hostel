@@ -16,7 +16,6 @@ function App() {
         document.title = "Welcome to CGEC Boys Hostel";
     })
     return (
-
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Index />} />

@@ -18,10 +18,7 @@ const Slider = () => {
     <div>
       <SimpleImageSlider
       style ={{
-         // width: "100%",
-          //height: "50%",
           backgroundColor: "black",
-          paddingTop: "65px",
           opacity: "1",
 
         }}
