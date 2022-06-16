@@ -19,7 +19,7 @@ function Home() {
     document.title = "Welcome to CGEC Boys Hostel";
   });
   return (
-    <div className="App">
+    <div className="bg">
       <Navbar />
       <Box>
         <Container>

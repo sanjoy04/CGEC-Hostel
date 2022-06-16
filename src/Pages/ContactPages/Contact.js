@@ -11,7 +11,7 @@ function Contact() {
     document.title = "Welcome to CGEC Boys Hostel";
   });
   return (
-    <div className="App">
+    <div className="bg">
       <Navbar />
       <Container className="contact-body">
         <Row>
