@@ -36,7 +36,7 @@ function About() {
           </AboutText>
         </AboutTop>
         <Responsibitity>
-          <Heading2>Person with responsibilities</Heading2>
+          <Heading2>Persons with responsibilities</Heading2>
           <Container className="Container">
             <Row>
               <Col className="col">

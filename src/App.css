@@ -16,11 +16,10 @@
 } */
 
 .bg {
-  text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* The image used */
   background-image: url("./images/hostel2.jpg");
-  height: 100vh;
+  height: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;

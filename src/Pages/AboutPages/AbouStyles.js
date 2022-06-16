@@ -27,6 +27,8 @@ export const AboutTop = styled.div`
 export const Responsibitity = styled.div`
   margin: 20px;
   margin-top: 40px;
+  background: rgb(231, 235, 240);
+  border-radius: 10px;
 `;
 
 export const Heading1 = styled.p`
@@ -53,6 +55,7 @@ export const AboutText = styled.p`
 `;
 
 export const Heading2 = styled.h4`
+  padding-top: 20px;
   margin-left: 60px;
   @media (max-width: 1000px){
       margin-left : 0;
@@ -61,7 +64,7 @@ export const Heading2 = styled.h4`
 
 export const People = styled.p`
   color: #000;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   font-size: 18px;
   text-decoration: none;
   margin-left: 20px;
@@ -71,8 +74,10 @@ export const People = styled.p`
   }
 `;
 export const Peoples = styled.div`
+  background:white;
+  margin-bottom: 20px;
   border-radius: 10px;
-  padding-bottom: 5px;
+  padding: 20px 0;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
   }
 `;
