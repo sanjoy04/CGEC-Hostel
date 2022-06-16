@@ -16,7 +16,7 @@ import {
 
 function About() {
   return (
-    <div className="bg">
+    <div className="App">
       <Navbar />
       <MainContainer>
         <AboutTop>
