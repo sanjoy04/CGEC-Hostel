@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Box = styled.div`
-  padding-top: 100px;
+  padding-top: 20px;
   background: black;
   // position: fixed;
   justify-content: flex-end;

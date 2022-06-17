@@ -5,78 +5,90 @@ import Footer from "../../Components/Footer";
 import { Container, Col, Row, Button } from "react-bootstrap";
 import "./Contact.css";
 import Form from "react-bootstrap/Form";
+import {
+  Address,
+  Heading,
+  Text,
+  Line,
+  Body,
+  Submit,
+  Phone,
+  Mail,
+} from "./ContactStyles";
 
 function Contact() {
   useEffect(() => {
     document.title = "Welcome to CGEC Boys Hostel";
   });
   return (
-    <div className="App">
+    <div className="bg">
       <Navbar />
       <Container className="contact-body">
         <Row>
           <Col className="col col-md-4">
-            <div class="info-content">
-              <h4>Address</h4>
-              <div class="text">
-                <p>Harinchawra,</p>
+            <Address class="info-content">
+              <Heading>Address</Heading>
+              <Text class="text">
+                <Line>Harinchawra,</Line>
 
-                <p>
+                <Line>
                   <strong>Post-</strong> Ghughumari,
-                </p>
+                </Line>
 
-                <p>
+                <Line>
                   <strong>District-</strong> Cooch Behar,
-                </p>
+                </Line>
 
-                <p>West Bengal</p>
+                <Line>West Bengal</Line>
 
-                <p>736170</p>
-              </div>
-            </div>
+                <Line>736170</Line>
+              </Text>
+            </Address>
           </Col>
           <Col className="col col-md-4">
-            <div class="info-content">
-              <h4>Phone</h4>
-              <div class="text">
-                <p>
+            <Phone class="info-content">
+              <Heading>Phone</Heading>
+              <Text class="text">
+                <Line>
                   <strong>Principal Office:</strong> +91 03582-233040
-                </p>
+                </Line>
 
-                <p>
+                <Line>
                   <strong>Registrar Officer:</strong> +91 03582-233042
-                </p>
+                </Line>
 
-                <p>
+                <Line>
                   <strong>Security Guards:</strong> +91 03582-233041
-                </p>
-              </div>
-            </div>
+                </Line>
+              </Text>
+            </Phone>
           </Col>
           <Col className="col col-md-4">
-            <div class="info-content">
-              <h4>Email</h4>
-              <div class="text">
-                <p></p>
-                <p>Principlecgec@gmail.com</p>
-              </div>
-            </div>
+            <Mail class="info-content">
+              <Heading>Email</Heading>
+              <Text class="text">
+                <Line></Line>
+                <Line>Principlecgec@gmail.com</Line>
+              </Text>
+            </Mail>
           </Col>
         </Row>
         <Row>
-          <Col className="col col-md-6">
-            
-              <iframe className="form-body"
-                src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d947.4095284512034!2d89.46173892637432!3d26.29597633000579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m3!3m2!1d26.296093499999998!2d89.4627278!4m0!5e0!3m2!1sen!2sin!4v1655140945250!5m2!1sen!2sin"
-                
-                width="100%"
-                height="100%"
-              ></iframe>
-            
+          <Col className="mt-3 col col-md-6">
+            <iframe className="form-body"
+              width="100%"
+              height="100%"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=cgec%20boy's%20&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe>
           </Col>
-          <Col className="col col-md-6">
+          <Col className="mt-3 col col-md-6">
             <Form className="form-body">
-              <div className="body">
+              <Body className="body">
                 <Form.Group className="mb-3" controlId="formBasicName">
                   <Form.Label>Name</Form.Label>
                   <Form.Control type="text" placeholder="Enter your name" />
@@ -96,12 +108,12 @@ function Contact() {
                     placeholder="Enter your subject here"
                   />
                 </Form.Group>
-                <div className="submit">
+                <Submit className="submit">
                   <Button variant="primary" type="submit">
                     Submit
                   </Button>
-                </div>
-              </div>
+                </Submit>
+              </Body>
             </Form>
           </Col>
         </Row>
