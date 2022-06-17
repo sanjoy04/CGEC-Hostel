@@ -4,7 +4,7 @@ export const MainContainer = styled.div`
   padding-top: 110px;
 `;
 
-export const Facilitiesop = styled.div`
+export const FacilitiesTop = styled.div`
   margin: 10px;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -23,6 +23,15 @@ export const Facilitiesop = styled.div`
     box-shadow: 10px 10px rgb(184, 182, 184);
   }
 `;
+export const FacilitiesCard = styled.div`
+
+  margin: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  
+  `;
 
 export const Responsibitity = styled.div`
   margin: 20px;

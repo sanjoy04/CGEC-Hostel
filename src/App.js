@@ -10,6 +10,7 @@ import Index from './Pages/Index';
 import About from './Pages/AboutPages/About';
 import Contact from './Pages/ContactPages/Contact';
 import Home from './Pages/HomePages/Home';
+import Facilities from './Pages/FacilitiesPages/Facilities';
 
 function App() {
     useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/Home" element={<Home />} />
                 <Route path="/*" element={<Index />} />
+                <Route path="/Facilities" element={<Facilities/>}/>
             </Routes>
         </BrowserRouter>
 
