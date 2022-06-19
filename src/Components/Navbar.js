@@ -90,6 +90,12 @@ export default function Navbar_() {
           <Navbar.Collapse className="right_align" id="responsive-navbar-nav">
             <Nav className="nav_elements">
               <Nav.Link>
+                <Link className="link" to={""}>
+                  Galary
+                </Link>
+              </Nav.Link>
+
+              <Nav.Link>
                 <Link className="link" to={"/About"}>
                   About
                 </Link>
