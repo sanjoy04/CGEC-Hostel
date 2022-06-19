@@ -56,7 +56,7 @@ function Facilities() {
                   <p class="card-text">•  Students must turn off all the electrical equipments & lights before leaving their rooms.</p>
                   <p class="card-text">•  Students are not allowed to use electric stoves, heaters etc in rooms except in designated places.</p>
                   <p class="card-text">•  Students are not allowed to organize any group activities in their room</p>
-                  
+
                 </div>
               </div>
             </div>

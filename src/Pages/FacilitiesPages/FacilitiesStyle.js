@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
   padding-top: 110px;
 `;
-
 export const FacilitiesTop = styled.div`
   margin: 10px;
   margin-right: 20px;
@@ -30,12 +29,13 @@ export const FacilitiesCard = styled.div`
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 10px;
-  
   `;
 
 export const Responsibitity = styled.div`
-  margin: 20px;
-  margin-top: 40px;
+margin: 20px;
+margin-top: 40px;
+background: rgb(231, 235, 240);
+border-radius: 10px;
 `;
 
 export const Heading1 = styled.p`
