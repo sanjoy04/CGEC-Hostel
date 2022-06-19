@@ -1,7 +1,8 @@
 import Footer from "../../Components/Footer";
 import Navbar from "../../Components/Navbar";
 import { Container, Col } from "react-bootstrap";
-import { Card } from "react-bootstrap";
+import { Card, CardGroup, CardImg } from "react-bootstrap";
+
 import {
   Heading1,
   Heading,
@@ -61,6 +62,18 @@ function Facilities() {
               </div>
             </div>
           </div>
+
+          <Card className="bg-dark text-white">
+            <Card.Img src="images/hostel1.jpg" alt="Card image" />
+            <Card.ImgOverlay>
+              <Card.Title>Card title</Card.Title>
+              <Card.Text>
+                This is a wider card with supporting text below as a natural lead-in to
+                additional content. This content is a little bit longer.
+              </Card.Text>
+              <Card.Text>Last updated 3 mins ago</Card.Text>
+            </Card.ImgOverlay>
+          </Card>
 
         </FacilitiesCard>
         <Responsibitity>
