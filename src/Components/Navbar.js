@@ -91,7 +91,7 @@ export default function Navbar_() {
             <Nav className="nav_elements">
               <Nav.Link>
                 <Link className="link" to={""}>
-                  Galary
+                  Gallery
                 </Link>
               </Nav.Link>
 
