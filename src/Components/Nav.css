@@ -2,7 +2,7 @@
     /* display: flex; */
     position: absolute;
     float: right;
-    width: 100vw;
+    width: 100%;
 }
 
 .right_align {
