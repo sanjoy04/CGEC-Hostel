@@ -95,3 +95,4 @@ export const Row = styled.div`
     grid-template-columns: 1fr;
   }
 `;
+
