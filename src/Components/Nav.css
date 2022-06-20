@@ -1,8 +1,9 @@
 .nav_bar {
     /* display: flex; */
-    position: absolute;
+    position: sticky;
     float: right;
     width: 100%;
+    font-weight: bold;
 }
 
 .right_align {

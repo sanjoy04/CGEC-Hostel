@@ -3,7 +3,7 @@ import "./Index.css";
 import { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
-import Slider from "../../Components/Slider";
+import Typed from 'react-typed'
 import {
   Heading,
   AboutText,
@@ -20,9 +20,18 @@ function Index() {
   return (
     <div className="App">
       <Navbar />
-      <MainContainer>
+      <MainContainer className="main-container">
         <IndexTop>
-          <Heading>Hey!!!  Welcome to Sukanta Chhatrabas</Heading>
+          <Heading><Typed
+          strings={[
+            "Hey!!!  Welcome to Sukanta Chhatrabas",
+            "Explore your Life!",
+            "Good Luck!",
+          ]}
+          typeSpeed={70}
+          backSpeed={50}
+          loop
+          /></Heading>
           <AboutText>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga quasi
             aperiam eaque impedit dolor deserunt eos cumque dicta harum!
@@ -38,7 +47,6 @@ function Index() {
           </AboutText>
         </IndexTop>
       </MainContainer>
-      <Slider/>
       <Footer />
     </div>
   );

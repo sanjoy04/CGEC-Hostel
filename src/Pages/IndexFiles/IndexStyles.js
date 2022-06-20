@@ -2,34 +2,26 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
   padding-top: 90px;
-  color: rgb(206, 190, 5);
+  color: rgb(255, 255, 255);
+  height: 100vh;
+  text-align: centre;
 `;
 
 export const IndexTop = styled.div`
-  
+margin:60px;
+  color: white;
   padding: 40px;
-  background-color: rgb(0, 0, 0);
-  opacity:0.5;
-
-  &:hover {
-    padding:45px;
-    color:yellow;
-  }
 `;
 
-export const Heading = styled.p`
-  font-size: 24px;
-  color: #fff;
+export const Heading = styled.h3`
   margin-bottom: 20px;
   font-weight: bold;
+  color:white;
 `;
 export const AboutText = styled.p`
-  color: #fff;
   margin-bottom: 20px;
-  font-size: 18px;
-  text-decoration: none;
-
-  &:hover {
-    transition: 200ms ease-in;
-  }
+  font-size: 24px;
+  background: rgb(0,0,0,0.5);
+  padding: 20px;
+  border-radius:10px;
 `;
