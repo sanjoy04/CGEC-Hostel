@@ -1,8 +1,9 @@
 .App {
+  color: white;
   text-align: justify;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   /* The image used */
-  background-image: url("./images/hostel2.jpg");
+  background-image: url("./images/hostel.jpeg");
   height: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;

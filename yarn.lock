@@ -8066,6 +8066,11 @@ react-simple-image-slider@^2.4.1:
   resolved "https://registry.yarnpkg.com/react-simple-image-slider/-/react-simple-image-slider-2.4.1.tgz#ba80e5741b32a531110cb3811ed9f76e3eee88f8"
   integrity sha512-9T/WjsRThJup43QxzH202rLVNqaUK9P8izTiWOfLcc5w3QygU44a9IQUuIwGYiXtWvw2spRRGLRc5Xd62/vfDg==
 
+react-simple-typewriter@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-simple-typewriter/-/react-simple-typewriter-3.0.1.tgz#5dc7b924a2e1a96950b5a2064f2dfbdfe1f8a60d"
+  integrity sha512-z+aJugzvYPng9HoggyXNpnp7NjxtusGAb33bRaGRK2pEdirVKX4v3qrwdHqs6zdhCeLAthLGLtxgVX9oGekTLg==
+
 react-slideshow-image@^3.7.5:
   version "3.7.5"
   resolved "https://registry.yarnpkg.com/react-slideshow-image/-/react-slideshow-image-3.7.5.tgz#d49834a9c99bd5fe3d49eb4d7b9da83e47288ec7"

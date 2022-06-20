@@ -20,7 +20,7 @@ function Index() {
   return (
     <div className="App">
       <Navbar />
-      <MainContainer>
+      <MainContainer className="main-container">
         <IndexTop>
           <Heading>Hey!!!  Welcome to Sukanta Chhatrabas</Heading>
           <AboutText>
