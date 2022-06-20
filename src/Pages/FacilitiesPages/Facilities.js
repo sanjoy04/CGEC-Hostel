@@ -25,7 +25,7 @@ function Facilities() {
         <FacilitiesTop>
           <Heading1>Facilities of hostel</Heading1>
           <FacilitiesText>
-            SKIT provides hostel accommodation to students within the institute premises. There are two hostels Nirwana Boys Hostel having a capacity of 460 seats with single seated air-cooled rooms and Noran Girls Hostel having a capacity of 265 seats with double seated air-cooled rooms. The hostel is administered by chief warden and assisted by warden/assistant warden. Each room is provided with furniture needed by a student i.e. bed, table, chair, cupboard, etc. Hostel rooms are allotted on "first come first serve basis".
+            CGEC provides hostel accommodation to students within the institute premises. There are two hostels Sukanta Chhatrabas Boys Hostel having a capacity of 460 seats with three seated air-cooled rooms and Noran Girls Hostel having a capacity of 265 seats with double seated air-cooled rooms. The hostel is administered by chief warden and assisted by warden/assistant warden. Each room is provided with furniture needed by a student i.e. bed, table, chair, cupboard, etc. Hostel rooms are allotted on "first come first serve basis".
           </FacilitiesText>
           <FacilitiesText>
             There is a separate mess for boys and girls. The entire mess area is air-cooled and students are provided with breakfast, lunch, evening refreshment & dinner. The hostel committee coordinates with the mess committee for smooth running of the mess. The mess committee monitors the quality, taste and hygiene of food served in the mess. They also interact with the mess vendor to provide him with the feedback of students and to introduce possible changes in the menu. Review and inspection of the food quality is carried out at regular intervals.
@@ -62,119 +62,58 @@ function Facilities() {
               </div>
             </div>
           </div>
+          {/* Cards */}
 
-          <Card className="bg-dark text-white">
-            <Card.Img src="images/hostel1.jpg" alt="Card image" />
-            <Card.ImgOverlay>
-              <Card.Title>Card title</Card.Title>
-              <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to
-                additional content. This content is a little bit longer.
-              </Card.Text>
-              <Card.Text>Last updated 3 mins ago</Card.Text>
-            </Card.ImgOverlay>
-          </Card>
-
+          <div className="container">
+            <div className="row my-4">
+              <div className="col-sm">
+                <div class="card "  >
+                  <img
+                    class="card-img-top"
+                    src="https://content3.jdmagicbox.com/comp/cooch_behar/f4/9999p3582.3582.170927023257.n5f4/catalogue/boys-hostel-cgec-cooch-behar-hostel-for-boy-students-kzvnz0pqdi.jpg"
+                    alt="Card image cap"
+                    height="200px"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm">
+                <div class="card" >
+                  <img
+                    class="card-img-top"
+                    src="https://lh5.googleusercontent.com/p/AF1QipMJhtswfO4JbnMM4WfHPgNaUl466xAjrMBSMJ3R=w1080-k-no"
+                    alt="Card image cap"
+                    height="200px"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm">
+                <div class="card" >
+                  <img
+                    class="card-img-top"
+                    src="https://lh3.googleusercontent.com/p/AF1QipNvVvGwDULuiVsEFWK4LtXMaP-_gPfrbEEBBuGn=s1600-w400"
+                    alt="Card image cap"
+                    height="200px"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </FacilitiesCard>
-        <Responsibitity>
-          <Heading2>Person with responsibilities</Heading2>
-          <Container className="Container">
-            <Row>
-              <Col className="col">
-                <Heading>Hostel Caretakers</Heading>
-                <Peoples>
-                  <People>
-                    <img
-                      src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
-                      height="30px"
-                    />{" "}
-                    Nihar Ranjan Dey
-                  </People>
-                  <People>
-                    <img
-                      src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
-                      height="30px"
-                    />{" "}
-                    Nihar Ranjan Dey
-                  </People>
-                  <People>
-                    <img
-                      src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
-                      height="30px"
-                    />{" "}
-                    Nihar Ranjan Dey
-                  </People>
-                  <People>
-                    <img
-                      src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
-                      height="30px"
-                    />{" "}
-                    Nihar Ranjan Dey
-                  </People>
-                </Peoples>
-              </Col>
-              <Col className="col">
-                <Heading>Mess Comitee</Heading>
-                <Peoples>
-                  <People>
-                    <img
-                      src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
-                      height="30px"
-                    />{" "}
-                    Sajamal Gayen
-                  </People>
-                  <People>
-                    <img
-                      src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
-                      height="30px"
-                    />{" "}
-                    Sajamal Gayen
-                  </People>
-                  <People>
-                    <img
-                      src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
-                      height="30px"
-                    />{" "}
-                    Sajamal Gayen
-                  </People>
-                  <People>
-                    <img
-                      src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
-                      height="30px"
-                    />{" "}
-                    Sajamal Gayen
-                  </People>
-                </Peoples>
-              </Col>
-              <Col className="col">
-                <Heading>Developer Team</Heading>
-                <Peoples>
-                  <People>
-                    <img
-                      src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
-                      height="30px"
-                    />{" "}
-                    Sanjoy Roy
-                  </People>
-                  <People>
-                    <img
-                      src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
-                      height="30px"
-                    />{" "}
-                    Dipa Chakroborty
-                  </People>
-                  <People>
-                    <img
-                      src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
-                      height="30px"
-                    />{" "}
-                    Bapi Mahato
-                  </People>
-                </Peoples>
-              </Col>
-            </Row>
-          </Container>
-        </Responsibitity>
       </MainContainer>
       <Footer />
     </div>
