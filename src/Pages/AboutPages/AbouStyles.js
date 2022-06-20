@@ -54,6 +54,7 @@ export const AboutText = styled.p`
 `;
 
 export const Heading2 = styled.h4`
+  color:black;
   padding-top: 20px;
   margin-left: 60px;
   @media (max-width: 1000px){
