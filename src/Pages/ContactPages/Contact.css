@@ -4,6 +4,12 @@
     padding-top: 120px;
 }
 
+.contact{
+    background: rgb(0,0,0,0.5);
+    border-radius: 10px;
+    padding: 20px;
+}
+
 .form-body {
     background-color: white;
     /* margin: 20px auto; */

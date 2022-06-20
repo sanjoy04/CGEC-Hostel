@@ -77,7 +77,7 @@ export default function Navbar_() {
         className="nav_bar"
         collapseOnSelect
         expand="lg"
-        bg="dark"
+        bg="light-dark"
         variant="dark"
       >
         <Container>

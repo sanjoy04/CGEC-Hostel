@@ -3,6 +3,7 @@
     position: sticky;
     float: right;
     width: 100%;
+    font-weight: bold;
 }
 
 .right_align {

@@ -8,18 +8,20 @@ export const MainContainer = styled.div`
 `;
 
 export const IndexTop = styled.div`
+margin:60px;
   color: white;
   padding: 40px;
-  opacity: 0.5;
 `;
 
-export const Heading = styled.p`
-  font-size: 24px;
+export const Heading = styled.h3`
   margin-bottom: 20px;
   font-weight: bold;
+  color:white;
 `;
 export const AboutText = styled.p`
   margin-bottom: 20px;
-  font-size: 18px;
-  text-decoration: none;
+  font-size: 24px;
+  background: rgb(0,0,0,0.5);
+  padding: 20px;
+  border-radius:10px;
 `;

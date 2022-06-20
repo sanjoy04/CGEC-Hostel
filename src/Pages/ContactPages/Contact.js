@@ -24,7 +24,7 @@ function Contact() {
     <div className="App">
       <Navbar />
       <Container className="contact-body">
-        <Row>
+        <Row className="contact">
           <Col className="col col-md-4">
             <Address class="info-content">
               <Heading>Address</Heading>
