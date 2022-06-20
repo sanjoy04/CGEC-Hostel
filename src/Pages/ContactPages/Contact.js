@@ -2,10 +2,13 @@
 import { useEffect } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
-import { Container, Col, Row, Button } from "react-bootstrap";
+import { Container,Button } from "react-bootstrap";
 import "./Contact.css";
 import Form from "react-bootstrap/Form";
 import {
+  Row,
+  Row1,
+  Col,
   Address,
   Heading,
   Text,
@@ -73,7 +76,7 @@ function Contact() {
             </Mail>
           </Col>
         </Row>
-        <Row>
+        <Row1 class="d-flex flex-row">
           <Col className="mt-3 col col-md-6">
             <iframe className="form-body"
               width="100%"
@@ -116,7 +119,7 @@ function Contact() {
               </Body>
             </Form>
           </Col>
-        </Row>
+        </Row1>
       </Container>
       <Footer />
     </div>

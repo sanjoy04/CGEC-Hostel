@@ -3,14 +3,23 @@ import styled from "styled-components";
 export const MainContainer = styled.div`
   padding-top: 90px;
   color: rgb(255, 255, 255);
-  height: 100vh;
+  height: 100%;
   text-align: centre;
 `;
 
 export const IndexTop = styled.div`
-margin:60px;
+  margin:60px;
   color: white;
   padding: 40px;
+  @media (max-width: 767px) {
+    /* mobile */
+    margin:0;
+}
+
+@media (max-width: 991px) {
+    /* tablet */
+    margin:0;
+}
 `;
 
 export const Heading = styled.h3`
