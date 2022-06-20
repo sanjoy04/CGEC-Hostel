@@ -1,16 +1,10 @@
 import "../../App.css";
+import "./Home.css";
 import { useEffect } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
-import {
-  Box,
-  Container,
-  Row,
-  Column,
-  OuterRow,
-  Heading,
-  InnerBox,
-} from "./HomeStyle";
+import { Container, Row, Col } from "react-bootstrap";
+import section from "../../images/section.png";
 
 import slider1 from "../../images/MAKAUT.jpg";
 
@@ -21,57 +15,79 @@ function Home() {
   return (
     <div className="App">
       <Navbar />
-      <Box>
-        <Container>
-          <OuterRow>
-            <Column>
-              <Row>
-                <Column>
-                  <InnerBox>
-                    <Heading>Room Change</Heading>
-                  </InnerBox>
-                </Column>
-                <Column>
-                  <InnerBox>
-                    <Heading>Complaints</Heading>
-                  </InnerBox>
-                </Column>
-                <Column>
-                  <InnerBox>
-                    <Heading>Fooding</Heading>
-                  </InnerBox>
-                </Column>
-              </Row>
-              <Row>
-                <Column>
-                  <InnerBox>
-                    <Heading>Room Change</Heading>
-                  </InnerBox>
-                </Column>
-                <Column>
-                  <InnerBox>
-                    <Heading>Complaints</Heading>
-                  </InnerBox>
-                </Column>
-                <Column>
-                  <InnerBox>
-                    <Heading>Fooding</Heading>
-                  </InnerBox>
-                </Column>
-              </Row>
-            </Column>
-            <Column>
-              <h3>Notice</h3>
-              <Row>Notic</Row>
-              <Row>Notic</Row>
-              <Row>Notic</Row>
-              <Row>Notic</Row>
-              <Row>Notic</Row>
-              <Row>Notic</Row>
-            </Column>
-          </OuterRow>
+      <div className="fullBody">
+        <Container className="home-body">
+          <div className="body">
+            <Row>
+              <Col sm={8} className="">
+                <Row>
+                  <Col className="section">
+                    <div className="outerCard">
+                      <span className="card ">
+                        <img src={section}></img>
+                      </span>
+                      <span className="heading">Room Change</span>
+                    </div>
+                  </Col>
+                  <Col className="section">
+                    <div className="outerCard">
+                      <span className="card ">
+                        <img src={section}></img>
+                      </span>
+                      <span className="heading">Room Change</span>
+                    </div>
+                  </Col>
+                  <Col className="section">
+                    <div className="outerCard">
+                      <span className="card ">
+                        <img src={section}></img>
+                      </span>
+                      <span className="heading">Room Change</span>
+                    </div>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col className="section">
+                    <div className="outerCard">
+                      <span className="card ">
+                        <img src={section}></img>
+                      </span>
+                      <span className="heading">Room Change</span>
+                    </div>
+                  </Col>
+                  <Col className="section">
+                    <div className="outerCard">
+                      <span className="card ">
+                        <img src={section}></img>
+                      </span>
+                      <span className="heading">Room Change</span>
+                    </div>
+                  </Col>
+                  <Col className="section">
+                    <div className="outerCard">
+                      <span className="card ">
+                        <img src={section}></img>
+                      </span>
+                      <span className="heading">Room Change</span>
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+              <Col sm={4}>
+                <div className="notice border border-primary">
+                  <h3>Notice</h3>
+                  <p>Notice</p>
+                  <p>Notice</p>
+                  <p>Notice</p>
+                  <p>Notice</p>
+                  <p>Notice</p>
+                  <p>Notice</p>
+                </div>
+              </Col>
+            </Row>
+          </div>
         </Container>
-      </Box>
+      </div>
       <Footer />
     </div>
   );

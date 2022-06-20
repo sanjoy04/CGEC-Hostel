@@ -16,9 +16,8 @@ export const AboutTop = styled.div`
   box-shadow: 10px 10px rgb(184, 182, 184);
 
   &:hover {
-    margin: 15px;
-    margin-right: 25px;
-    margin-bottom: 25px;
+    padding-top:15px;
+    padding-bottom:25px;
     background-color: #20232a;
     box-shadow: 10px 10px rgb(184, 182, 184);
   }

@@ -1,6 +1,6 @@
 .nav_bar {
     /* display: flex; */
-    position: absolute;
+    position: sticky;
     float: right;
     width: 100%;
 }
