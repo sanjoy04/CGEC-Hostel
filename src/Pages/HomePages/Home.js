@@ -19,14 +19,14 @@ function Home() {
         <Container className="home-body">
           <div className="body">
             <Row>
-              <Col sm={8} className="">
+              <Col sm={8} className="complain-section">
                 <Row>
                   <Col className="section">
                     <div className="outerCard">
                       <span className="card ">
                         <img src={section}></img>
                       </span>
-                      <span className="heading">Room Change</span>
+                      <span className="heading">Room Change Request</span>
                     </div>
                   </Col>
                   <Col className="section">
@@ -34,7 +34,7 @@ function Home() {
                       <span className="card ">
                         <img src={section}></img>
                       </span>
-                      <span className="heading">Room Change</span>
+                      <span className="heading">Complaint Box</span>
                     </div>
                   </Col>
                   <Col className="section">
@@ -42,7 +42,7 @@ function Home() {
                       <span className="card ">
                         <img src={section}></img>
                       </span>
-                      <span className="heading">Room Change</span>
+                      <span className="heading">Food Attendence</span>
                     </div>
                   </Col>
                 </Row>
@@ -74,7 +74,7 @@ function Home() {
                 </Row>
               </Col>
               <Col sm={4}>
-                <div className="notice border border-primary">
+                <div className="notice">
                   <h3>Notice</h3>
                   <p>Notice</p>
                   <p>Notice</p>

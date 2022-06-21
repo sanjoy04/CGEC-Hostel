@@ -43,7 +43,7 @@ export const Row = styled.div`
   grid-gap: 30px;
 
   @media (max-width: 1000px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
@@ -59,7 +59,7 @@ export const InnerBox = styled.div`
 
 export const Heading = styled.p`
   font-size: 24px;
-  color: #000;
+  color: green;
   margin-bottom: 40px;
   font-weight: bold;
 `;

@@ -12,10 +12,11 @@ display: grid;
 export const Row1 = styled.div`
 display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
+  grid-gap: 8rem;
 
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
+    grid-gap: 30px;
   }
 `;
 export const Col = styled.div`
