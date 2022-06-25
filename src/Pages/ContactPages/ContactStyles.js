@@ -1,5 +1,29 @@
 import styled from "styled-components";
 
+export const Row = styled.div`
+display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+  }
+`;
+export const Row1 = styled.div`
+display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8rem;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+`;
+export const Col = styled.div`
+display: flex;
+  flex-direction: column;
+  width:100%;
+`;
 export const Address = styled.div`
 `;
 export const Heading = styled.h4`

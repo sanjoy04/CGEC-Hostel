@@ -1,6 +1,5 @@
 .contact-body {
     padding: 25px;
-    /* margin-top: 100px; */
     padding-top: 120px;
 }
 
@@ -13,7 +12,6 @@
 
 .form-body {
     background-color: white;
-    /* margin: 20px auto; */
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -21,13 +19,18 @@
     color: white;
 }
 
-@media (maxWidth: '767px') {
+@media (max-width: '767px') {
     /* mobile */
-    .contact-body{
-        width: 750px;
+    .mapSection{
+        display: flex !important;
+        flex-direction: column !important;
     }
 }
 
-@media (maxWidth: '991px') {
+@media (max-width: '991px') {
     /* tablet */
+    .mapSection{
+        display: flex !important;
+        flex-direction: column !important;
+    }
 }

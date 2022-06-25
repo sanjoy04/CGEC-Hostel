@@ -1,6 +1,7 @@
 import Footer from "../../Components/Footer";
 import Navbar from "../../Components/Navbar";
 import { Container, Col } from "react-bootstrap";
+import Typed from "react-typed";
 import {
   Heading1,
   Heading,
@@ -20,7 +21,14 @@ function About() {
       <Navbar />
       <MainContainer>
         <AboutTop>
-          <Heading1>About the hostel</Heading1>
+          <Heading1>
+            <Typed
+              strings={["About the hostel", "Explore your Life!", "Good Luck!"]}
+              typeSpeed={70}
+              backSpeed={50}
+              loop
+            />
+          </Heading1>
           <AboutText>
             A hostel is a place where students live to study or for work. It is
             usually supervised by a hostel manager and residents. Students
@@ -77,7 +85,7 @@ function About() {
                       src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
                       height="30px"
                     />{" "}
-                    Sajamal Gayen
+                    Taranga Garai
                   </People>
                   <People>
                     <img
@@ -91,7 +99,7 @@ function About() {
                       src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
                       height="30px"
                     />{" "}
-                    Sajamal Gayen
+                    SK Nejamuddin
                   </People>
                   <People>
                     <img
@@ -117,14 +125,14 @@ function About() {
                       src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
                       height="30px"
                     />{" "}
-                    Dipa Chakroborty
+                    Dipantan Chakroborty
                   </People>
                   <People>
                     <img
                       src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
                       height="30px"
                     />{" "}
-                    Bapi Mahato
+                    Tinku Mahato
                   </People>
                 </Peoples>
               </Col>
