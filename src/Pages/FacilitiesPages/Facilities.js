@@ -32,87 +32,84 @@ function Facilities() {
           </FacilitiesText>
         </FacilitiesTop>
         <FacilitiesCard>
-          <div class="row border-success mb-3">
-            <div class="col-sm-6">
-              <div class="card border-success">
-                <div class="card-body">
-                  <h5 class="card-title">Facilities : </h5>
-                  <p class="card-text">•  Mess, canteen, RO water system, hot water supply through geysers in winter.</p>
-                  <p class="card-text">•  Doctor is appointed for free check-up every day in the evening and college provides 24x7 medical facility.</p>
-                  <p class="card-text">•  Daily newspaper (Bengali & English) and TV facility.</p>
-                  <p class="card-text">•  Internet and Wi-Fi facility.</p>
-                  <p class="card-text">•  Guest room for parents/ guardian/ guest person(s) at reasonable charges.</p>
-                  <p class="card-text">•  24x7 guard security system.</p>
-                  <p class="card-text">•  Sports (indoor & outdoor) and Gym facility is also available separately in boys and girls hostel. </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card border-danger">
-                <div class="card-body">
-                  <h5 class="card-title">Rules :</h5>
-                  <p class="card-text">•  Smoking, Alcohol & Narcotic consumption is strictly prohibited in and around the Hostel premises. Strict action will be taken against offenders.</p>
-                  <p class="card-text">•  Students must keep the Campus & Rooms clean. Defacing walls, equipment, furniture etc., is strictly prohibited.</p>
-                  <p class="card-text">•  Birthday/Other Celebrations are strictly prohibited in Hostel.</p>
-                  <p class="card-text">•  Students must turn off all the electrical equipments & lights before leaving their rooms.</p>
-                  <p class="card-text">•  Students are not allowed to use electric stoves, heaters etc in rooms except in designated places.</p>
-                  <p class="card-text">•  Students are not allowed to organize any group activities in their room</p>
+          <div class="row">
+            <div class="col-sm">
 
-                </div>
+              <div class="card-body bg-success mb-3">
+                <h5 class="card-title text-white">Facilities : </h5>
+                <p class="card-text text-white">•  Mess, canteen, RO water system, hot water supply through geysers in winter.</p>
+                <p class="card-text text-white">•  Doctor is appointed for free check-up every day in the evening and college provides 24x7 medical facility.</p>
+                <p class="card-text text-white">•  Daily newspaper (Bengali & English) and TV facility.</p>
+                <p class="card-text text-white">•  Internet and Wi-Fi facility.</p>
+                <p class="card-text text-white">•  Guest room for parents/ guardian/ guest person(s) at reasonable charges.</p>
+                <p class="card-text text-white">•  24x7 guard security system.</p>
+                <p class="card-text text-white">•  Sports (indoor & outdoor) and Gym facility is also available separately in boys and girls hostel. </p>
+              </div>
+
+            </div>
+            <div class="col-sm">
+
+              <div class="card-body bg-primary mb-3" >
+                <h5 class="card-title text-white">Rules :</h5>
+                <p class="card-text text-white">•  Smoking, Alcohol & Narcotic consumption is strictly prohibited in and around the Hostel premises. Strict action will be taken against offenders.</p>
+                <p class="card-text text-white">•  Students must keep the Campus & Rooms clean. Defacing walls, equipment, furniture etc., is strictly prohibited.</p>
+                <p class="card-text text-white">•  Birthday/Other Celebrations are strictly prohibited in Hostel.</p>
+                <p class="card-text text-white">•  Students must turn off all the electrical equipments & lights before leaving their rooms.</p>
+                <p class="card-text text-white">•  Students are not allowed to use electric stoves, heaters etc in rooms except in designated places.</p>
+                <p class="card-text text-white">•  Students are not allowed to organize any group activities in their room</p>
+
+
               </div>
             </div>
           </div>
           {/* Cards */}
+          {/* <div class="container">
+          <div class="row">
 
-          <div className="container">
-            <div className="row my-4">
-              <div className="col-sm">
-                <div class="card "  >
-                  <img
-                    class="card-img-top"
-                    src="https://content3.jdmagicbox.com/comp/cooch_behar/f4/9999p3582.3582.170927023257.n5f4/catalogue/boys-hostel-cgec-cooch-behar-hostel-for-boy-students-kzvnz0pqdi.jpg"
-                    alt="Card image cap"
-                    height="200px"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+            <div class="card-group">
+              <div class="card">
+                <img class="card-img-top" 
+                src="https://lh3.googleusercontent.com/p/AF1QipNvVvGwDULuiVsEFWK4LtXMaP-_gPfrbEEBBuGn=s1600-w400" 
+                alt="Card image cap"
+                height="200px"
+                width="180px"
+                 />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
                 </div>
               </div>
-              <div className="col-sm">
-                <div class="card" >
-                  <img
-                    class="card-img-top"
-                    src="https://lh5.googleusercontent.com/p/AF1QipMJhtswfO4JbnMM4WfHPgNaUl466xAjrMBSMJ3R=w1080-k-no"
-                    alt="Card image cap"
-                    height="200px"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+              <div class="card">
+                <img class="card-img-top" 
+                src="https://lh3.googleusercontent.com/p/AF1QipNvVvGwDULuiVsEFWK4LtXMaP-_gPfrbEEBBuGn=s1600-w400" 
+                alt="Card image cap" 
+                height="200px"
+                weight="180px"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+
                 </div>
               </div>
-              <div className="col-sm">
-                <div class="card" >
-                  <img
-                    class="card-img-top"
-                    src="https://lh3.googleusercontent.com/p/AF1QipNvVvGwDULuiVsEFWK4LtXMaP-_gPfrbEEBBuGn=s1600-w400"
-                    alt="Card image cap"
-                    height="200px"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
+              <div class="card">
+                <img class="card-img-top" 
+                src="https://lh3.googleusercontent.com/p/AF1QipNvVvGwDULuiVsEFWK4LtXMaP-_gPfrbEEBBuGn=s1600-w400" 
+                alt="Card image cap"
+                height="200px" 
+                weight="180px"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+
                 </div>
               </div>
             </div>
+
           </div>
+          </div> */}
         </FacilitiesCard>
       </MainContainer>
       <Footer />
