@@ -101,3 +101,11 @@ div {
         padding: 10px;
     }
 }
+
+.room-change-dropsown{
+    display: flex;
+}
+
+.room-change-dropsown h6{
+    margin: 0 20px;
+}
