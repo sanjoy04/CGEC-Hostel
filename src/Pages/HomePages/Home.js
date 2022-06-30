@@ -5,7 +5,7 @@ import swal from "sweetalert";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import Typed from "react-typed";
-import { Heading, AboutText, MainContainer, IndexTop } from "./HomeStyle";
+import { Heading, AboutText, MainContainer, IndexTop, RowIn } from "./HomeStyle";
 import {
   Container,
   Row,
@@ -18,6 +18,9 @@ import {
   Alert,
 } from "react-bootstrap";
 import section from "../../images/section.png";
+import room_change from "../../images/room_change.png";
+import complain_box from "../../images/complain_box.jpg";
+import food from "../../images/food.jpg";
 
 import slider1 from "../../images/MAKAUT.jpg";
 
@@ -127,11 +130,11 @@ function Home() {
             <div className="body">
               <Row>
                 <Col sm={8} className="complain-section">
-                  <Row>
+                  <RowIn>
                     <Col className="section">
                       <div className="outerCard" onClick={handleRoomChangeShow}>
                         <span className="card ">
-                          <img src={section}></img>
+                          <img src={room_change}></img>
                         </span>
                         <span className="heading">Room Change Request</span>
                       </div>
@@ -139,7 +142,7 @@ function Home() {
                     <Col className="section">
                       <div className="outerCard" onClick={handleComplainShow}>
                         <span className="card ">
-                          <img src={section}></img>
+                          <img src={complain_box}></img>
                         </span>
                         <span className="heading">Complaint Box</span>
                       </div>
@@ -147,14 +150,14 @@ function Home() {
                     <Col className="section">
                       <div className="outerCard" onClick={handleMealShow}>
                         <span className="card ">
-                          <img src={section}></img>
+                          <img src={food}></img>
                         </span>
                         <span className="heading">
                           Meal Start- Stop Request
                         </span>
                       </div>
                     </Col>
-                  </Row>
+                  </RowIn>
                 </Col>
                 <Col sm={4}>
                   <div className="notice">

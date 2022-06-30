@@ -3,3 +3,36 @@
   text-align: center;
   align-items: center;
 }
+
+.cards{
+  height: 100%;
+  width: 85%;
+  border-radius: 10px;
+  background-color: white;
+}
+.image{
+  height: 45%;
+}
+
+.image img{
+  margin: 20px;
+  height: 80%;
+  width: 80%;
+}
+
+.text{
+  height: 55%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.text p{
+  padding: 30px;
+}
+
+@media (max-width: 1000px) {
+  .cards{
+    width: 100%;
+    height: 20rem;
+  }
+}

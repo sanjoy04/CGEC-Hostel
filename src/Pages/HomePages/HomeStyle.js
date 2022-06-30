@@ -37,7 +37,7 @@ grid-gap: 30px;
 }
 `;
 
-export const Row = styled.div`
+export const RowIn = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;

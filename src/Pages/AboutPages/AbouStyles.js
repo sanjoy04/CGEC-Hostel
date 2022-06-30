@@ -21,7 +21,7 @@ export const AboutTop = styled.div`
 export const Responsibitity = styled.div`
   margin: 20px;
   margin-top: 40px;
-  background: rgb(231, 235, 240, 0.3);
+  background: rgb(2, 5, 20, 0.5);
   border-radius: 10px;
 `;
 
@@ -30,15 +30,15 @@ export const Heading1 = styled.h3`
   color: #fff;
   margin-bottom: 20px;
   font-weight: bold;
-  text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px #0fa,
-    0 0 82px #0fa,
-    0 0 92px #0fa,
-    0 0 102px #0fa,
-    0 0 151px #0fa;
+  // text-shadow:
+  //   0 0 7px #fff,
+  //   0 0 10px #fff,
+  //   0 0 21px #fff,
+  //   0 0 42px #0fa,
+  //   0 0 82px #0fa,
+  //   0 0 92px #0fa,
+  //   0 0 102px #0fa,
+  //   0 0 151px #0fa;
   // text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
   //   0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
 `;

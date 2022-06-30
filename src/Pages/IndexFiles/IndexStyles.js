@@ -34,3 +34,23 @@ export const AboutText = styled.p`
   padding: 20px;
   border-radius:10px;
 `;
+export const RowIn = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin: 0 10rem;
+  margin-bottom: 20px;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 2rem;
+    margin-bottom: 20px;
+  }
+`;
+export const Col = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: centre;
+  margin-left: 20px;
+  grid-gap: 30px;
+`;
