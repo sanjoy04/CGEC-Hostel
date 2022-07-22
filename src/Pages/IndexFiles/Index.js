@@ -16,11 +16,17 @@ import {
 import hostel_rooms from "../../images/hostel-rooms.jpg";
 import hostel_beds from "../../images/hostel-beds.jpg";
 import ragging_free from "../../images/ragging-free.png";
+import { useNavigate } from "react-router-dom";
 
 function Index() {
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
   useEffect(() => {
     document.title = "Welcome to CGEC Boys Hostel";
+
+    if (localStorage.getItem("email")) {
+      navigate("/Home")
+    }
   });
 
   return (

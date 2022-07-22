@@ -1,26 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { Nav, Navbar, Container, Modal, Button, Form } from "react-bootstrap";
+import { Nav, Navbar, Container, Modal, Button, Form, Spinner } from "react-bootstrap";
 import swal from 'sweetalert';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Nav.css";
+import { API_URL } from '../Constants';
 
 export default function Navbar_() {
   const [show1, setShow1] = useState(false);
   const [show2, setShow2] = useState(false);
 
+  // for login
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
 
-  const [warning, setWarning] = useState();
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
 
+  const [warning, setWarning] = useState();
+  const [isLoading, setIsLoading] = useState(false)
+
+  // for signup
   const [registerName, setRegisterName] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPhone, setRegisterPhone] = useState("");
   const [semester, setSemester] = useState("");
-  const [year, setYear] = useState("");
   const [department, setDepartment] = useState("");
   const [roll, setRoll] = useState("");
+
+  const navigate = useNavigate()  //dynamically redirect to another page
 
   const handleCloseLogin = () => setShow1(false);
   const handleShowLogin = () => {
@@ -29,6 +36,13 @@ export default function Navbar_() {
     setLoginEmail("");
     setLoginPassword("")
   };
+
+  useEffect(() => {
+    const loggedin = localStorage.getItem("email");
+    if (loggedin) {
+      setIsLoggedIn(true)
+    }
+  }, [])
 
   useEffect(() => {
     if (warning) {
@@ -62,13 +76,38 @@ export default function Navbar_() {
       return;
     }
 
+    setIsLoading(true)
     // if all is well, send request to server
+    fetch(`${API_URL}getStudents?email=${loginEmail}&password=${loginPassword}`, {
+      method: 'get',
+      credentials: 'same-origin'
+    })
+      .then(resp => resp.json())
+      .then(resp => {
+        if (resp.status === "error") {
+          console.log(resp.message);
+        } else {
+          // login success
+          console.log(localStorage.setItem("email", resp.email)); //save email to localstorage
+          navigate("/Home")
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      })
+      .finally(() => {
+        // api call finished
+        setIsLoading(false)
+      })
 
 
   }
 
   function signup() {
-
+    // "password": registerPassword,
+    // "semester": semester,
+    // "department": ,
+    // "name": registerName
   }
 
   return (
@@ -110,11 +149,40 @@ export default function Navbar_() {
                   Contact
                 </Link>
               </Nav.Link>
-              <Nav.Link>
-                <Link className="link" to={""} onClick={handleShowLogin}>
-                  <img src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png" height={"30px"} />
-                </Link>
-              </Nav.Link>
+              {
+                isLoggedIn ?
+                  <Nav.Link>
+
+                    <img
+                      src="https://img.icons8.com/external-filled-line-kendis-lasman/344/external-logout-user-interface-filled-line-filled-line-kendis-lasman.png"
+                      alt="avatar"
+                      height={"30px"}
+                      onClick={() => {
+                        swal({
+                          title: 'Are you sure?',
+                          icon: 'warning',
+                          buttons: true
+                        })
+                          .then((e) => {
+                            if (e) {
+                              localStorage.removeItem("email")
+                              navigate("/")
+                            }
+                          })
+                      }}
+                    />
+
+                  </Nav.Link>
+                  :
+                  <Nav.Link>
+                    <Link className="link" to={""} onClick={handleShowLogin}>
+                      <img
+                        src="https://img.icons8.com/color/48/undefined/circled-user-male-skin-type-4--v1.png"
+                        alt="avatar"
+                        height={"30px"}
+                      />
+                    </Link>
+                  </Nav.Link>}
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -138,9 +206,15 @@ export default function Navbar_() {
           </Form.Group>
 
           <div className="d-grid gap-10">
-            <Button onClick={login} variant="primary" size="sm">
-              Login
-            </Button>
+            {
+              isLoading ? <div className="d-flex justify-content-center align-items-center">
+                <Spinner animation="border" variant="primary" />
+              </div>
+                :
+                <Button onClick={login} variant="primary" size="sm">
+                  Login
+                </Button>
+            }
           </div>
 
           <Form.Text className="text-muted d-flex justify-content-center mt-3">
@@ -185,7 +259,7 @@ export default function Navbar_() {
             </Form.Group>
             {/* Year of the form */}
             <Form.Group className="mb-1 col col-md-6" controlId="text">
-              <Form.Label>Year</Form.Label>
+              <Form.Label>Departent</Form.Label>
               <Form.Control type="text" placeholder="Enter year" />
             </Form.Group>
           </div>
