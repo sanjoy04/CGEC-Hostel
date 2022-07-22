@@ -15,14 +15,11 @@ import {
   Dropdown,
   DropdownButton,
   Form,
-  Alert,
 } from "react-bootstrap";
-import section from "../../images/section.png";
 import room_change from "../../images/room_change.png";
 import complain_box from "../../images/complain_box.jpg";
 import food from "../../images/food.jpg";
 
-import slider1 from "../../images/MAKAUT.jpg";
 
 function Home() {
   // Room change states
@@ -36,16 +33,16 @@ function Home() {
     setRoomChange(false);
   };
   const handleRoomChangeSubmit = () => {
-    if (selectRoomFrom == "--Select--") {
+    if (selectRoomFrom === "--Select--") {
       swal("Must Choose your room number");
       return;
     }
-    if (selectRoomTo == "--Select--") {
+    if (selectRoomTo === "--Select--") {
       swal("Choose room number you want to shift");
       return;
     }
 
-    if (roomChangeReason == "") {
+    if (roomChangeReason === "") {
       swal("Write the reason for room change");
       return;
     }
@@ -67,11 +64,11 @@ function Home() {
   const [selectComplain, setSelectComplain] = useState("Select your complain");
   const [complainDetails, setComplainDetails] = useState("");
   const handleComplainSubmit = () => {
-    if (selectComplain == "Select your complain") {
+    if (selectComplain === "Select your complain") {
       swal("Choose a valid reason");
       return;
     }
-    if (complainDetails == "") {
+    if (complainDetails === "") {
       swal("You have to write complain details");
       return;
     }
@@ -94,15 +91,15 @@ function Home() {
   const [endDate, setEndDate] = useState();
   const handleMealSubmit = () => {
     console.log(selectMealRadio);
-    if (selectMeal == "Select your preference") {
+    if (selectMeal === "Select your preference") {
       swal("Choose a valid preference");
       return;
     }
-    if(!selectMealRadio){
+    if (!selectMealRadio) {
       swal("Choose a valid meal option");
       return;
     }
-    if(!startDate){
+    if (!startDate) {
       swal("Choose a valid date");
       return;
     }
@@ -235,7 +232,7 @@ function Home() {
                     onClick={(e) => {
                       setSelectRoomFrom(e.target.innerHTML);
                     }}
-                    // value={item}
+                  // value={item}
                   >
                     {item}
                   </Dropdown.Item>
@@ -251,7 +248,7 @@ function Home() {
                       // console.log(e.target.innerHTML);
                       setSelectRoomTo(e.target.innerHTML);
                     }}
-                    // value={item}
+                  // value={item}
                   >
                     {item}
                   </Dropdown.Item>

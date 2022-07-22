@@ -1,12 +1,10 @@
 
 import '../App.css';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Navbar_ from '../Components/Navbar';
 import Footer from '../Components/Footer';
-import Slider from '../Components/Slider';
 
 function Index() {
-  const [index, setIndex] = useState(0);
   useEffect(() => {
     document.title = "Welcome to CGEC Boys Hostel";
   });
@@ -15,9 +13,6 @@ function Index() {
 
     <div className="App">
       <Navbar_ />
-      
-      {/* <div className='parallax'></div> */}
-      {/* <Slider /> */}
       <Footer />
     </div>
 
