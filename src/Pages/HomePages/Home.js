@@ -19,6 +19,9 @@ import {
 import room_change from "../../images/room_change.png";
 import complain_box from "../../images/complain_box.jpg";
 import food from "../../images/food.jpg";
+import { fetch_api } from '../../utils/fetch';
+import { getEmail } from '../../utils/storage';
+import { useNavigate } from "react-router-dom";
 
 
 function Home() {
@@ -32,6 +35,7 @@ function Home() {
   const handleRoomChangeClose = () => {
     setRoomChange(false);
   };
+  const navigation = useNavigate()
   const handleRoomChangeSubmit = () => {
     if (selectRoomFrom === "--Select--") {
       swal("Must Choose your room number");
@@ -46,10 +50,7 @@ function Home() {
       swal("Write the reason for room change");
       return;
     }
-    setRoomChange(false);
-    setSelectRoomFrom("--Select--");
-    setSelectRoomTo("--Select--");
-    setRoomChangeReason("");
+    insertRoomChange();
   };
   const handleRoomChangeShow = () => setRoomChange(true);
 
@@ -63,6 +64,8 @@ function Home() {
   ]);
   const [selectComplain, setSelectComplain] = useState("Select your complain");
   const [complainDetails, setComplainDetails] = useState("");
+
+
   const handleComplainSubmit = () => {
     if (selectComplain === "Select your complain") {
       swal("Choose a valid reason");
@@ -72,10 +75,10 @@ function Home() {
       swal("You have to write complain details");
       return;
     }
-    setComplain(false);
-    setSelectComplain("Select your complain");
-    setComplainDetails("");
+    insertComplain()
   };
+
+
   const handleComplainClose = () => {
     setComplain(false);
     setSelectComplain("Select your complain");
@@ -89,6 +92,7 @@ function Home() {
   const [selectMealRadio, setSelectMealRadio] = useState();
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
+
   const handleMealSubmit = () => {
     console.log(selectMealRadio);
     if (selectMeal === "Select your preference") {
@@ -103,9 +107,7 @@ function Home() {
       swal("Choose a valid date");
       return;
     }
-    setMeal(false);
-    setSelectMeal("Select your preference");
-    setSelectMealRadio();
+    insertMeal()
   };
   const handleMealClose = () => {
     setMeal(false);
@@ -115,7 +117,88 @@ function Home() {
 
   useEffect(() => {
     document.title = "Welcome to CGEC Boys ";
+    if (!getEmail()) {
+      navigation('/')
+    }
   });
+
+  function insertRoomChange() {
+    const data = JSON.stringify({
+      from_room: selectRoomFrom,
+      to_room: selectRoomTo,
+      reason: roomChangeReason,
+      email: getEmail()
+    })
+
+    if (getEmail()) {
+      fetch_api("roomChange", "post", data)
+        .then(resp => {
+          console.log(data);
+          swal({
+            title: resp.message,
+            icon: resp.status === 'error' ? 'error' : 'success',
+          })
+            .then(e => {
+              if (e) {
+                setRoomChange(false);
+                setSelectRoomFrom("--Select--");
+                setSelectRoomTo("--Select--");
+                setRoomChangeReason("");
+              }
+            })
+        })
+    }
+  }
+
+  function insertComplain() {
+    const data = JSON.stringify({
+      description: complainDetails,
+      email: getEmail(),
+      title: selectComplain
+    })
+    if (getEmail()) {
+      fetch_api("complain", "post", data)
+        .then(resp => {
+          swal({
+            title: resp.message,
+            icon: resp.status === 'error' ? 'error' : 'success',
+          })
+            .then(e => {
+              if (e) {
+                setComplain(false);
+                setSelectComplain("Select your complain");
+                setComplainDetails("");
+              }
+            })
+        })
+    }
+  }
+
+  function insertMeal() {
+    const data = JSON.stringify({
+      preference: selectMeal,
+      from: startDate,
+      meal_type: selectMealRadio,
+      email: getEmail(),
+      to: endDate
+    })
+    if (getEmail()) {
+      fetch_api("meal", "post", data)
+        .then(resp => {
+          swal({
+            title: resp.message,
+            icon: resp.status === 'error' ? 'error' : 'success',
+          })
+            .then(e => {
+              if (e) {
+                setMeal(false);
+                setSelectMeal("Select your preference");
+                setSelectMealRadio();
+              }
+            })
+        })
+    }
+  }
 
   return (
     <>
@@ -270,9 +353,6 @@ function Home() {
           <p>*Required field</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleRoomChangeClose}>
-            Close
-          </Button>
           <Button variant="primary" onClick={handleRoomChangeSubmit}>
             Submit Request
           </Button>
@@ -318,9 +398,7 @@ function Home() {
           <p>*Required field</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleComplainClose}>
-            Close
-          </Button>
+
           <Button variant="primary" onClick={handleComplainSubmit}>
             Raise a complain
           </Button>
@@ -334,18 +412,23 @@ function Home() {
           <Modal.Title>Request for start/stop meal</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <DropdownButton id="dropdown-item-button" title={selectMeal}>
-            {mealStopStart.map((item) => {
-              return (
-                <Dropdown.Item
-                  onClick={(e) => {
-                    setSelectMeal(e.target.innerHTML);
-                  }}
-                >
-                  {item}
-                </Dropdown.Item>
-              );
-            })}
+          <DropdownButton
+            id="dropdown-item-button"
+            title={selectMeal}
+          >
+            {
+              mealStopStart.map((item) => {
+                return (
+                  <Dropdown.Item
+                    onClick={(e) => {
+                      setSelectMeal(e.target.innerHTML);
+                    }}
+                  >
+                    {item}
+                  </Dropdown.Item>
+                );
+              })
+            }
           </DropdownButton>
           <Form.Group controlId="dob">
             <Form.Label className="mt-3 me-3">From</Form.Label>
@@ -375,13 +458,20 @@ function Home() {
                 value={startDate}
                 onChange={(e) => setStartDate(e.target.value)}
               />
-              <p className="mt-3">Till</p>
-              <Form.Control
-                type="date"
-                placeholder="Enter date"
-                value={endDate}
-                onChange={(e) => setEndDate(e.target.value)}
-              />
+              {
+                selectMeal !== "Start my meal" ?
+                  <>
+                    <p className="mt-3">Till</p>
+                    <Form.Control
+                      type="date"
+                      placeholder="Enter date"
+                      value={endDate}
+                      onChange={(e) => setEndDate(e.target.value)}
+                    />
+                  </>
+                  :
+                  null
+              }
             </div>
           </Form.Group>
           <p>*Required field</p>
