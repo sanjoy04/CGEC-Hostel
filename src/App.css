@@ -1,10 +1,13 @@
+@font-face {
+  font-family: 'regular';
+  src: local('Proxima Nova'),url("./fonts/nova.otf"),format('opentype');
+}
+
 .App {
   text-align: justify;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* The image used */
-  /* background: linear-gradient(to bottom, #33ccff 0%, #9966ff 100%); */
-  background-image: url("./images/bg-hostel.jpg");
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   height: 100%;
+  background-color: #161616;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
