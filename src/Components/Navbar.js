@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { Nav, Navbar, Container, Modal, Button, Form, Spinner } from "react-bootstrap";
 import swal from 'sweetalert';
 import { Link, useNavigate } from "react-router-dom";
 import "./Nav.css";
 import { API_URL } from '../Constants';
+
+const names = [
+  'Sukanta Chhatrabas - H2', 'সুকান্ত ছাত্রাবাস - হোস্টেল ২'
+]
 
 export default function Navbar_() {
   const [show1, setShow1] = useState(false);
@@ -110,6 +114,22 @@ export default function Navbar_() {
     // "name": registerName
   }
 
+
+
+  //for randomly cahnge the title
+
+  const [newName, setnewName] = useState("");
+
+    const shuffle = useCallback(() => {
+        const index = Math.floor(Math.random() * names.length);
+        setnewName(names[index]);
+    }, []);
+
+    useEffect(() => {
+        const intervalID = setInterval(shuffle, 3000);
+        return () => clearInterval(intervalID);
+    }, [shuffle])
+
   return (
     <>
       <Navbar
@@ -122,7 +142,7 @@ export default function Navbar_() {
         <Container>
           <Navbar.Brand>
             <Nav.Link>
-              <Link className="title" to={"/"}>Sukanta Chhatrabas</Link>
+              <Link className="title" to={"/"}>{newName}</Link>
             </Nav.Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
