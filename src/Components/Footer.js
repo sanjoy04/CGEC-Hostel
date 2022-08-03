@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   Box,
   Container,
@@ -20,10 +19,9 @@ const Footer = () => {
             <FooterLink href="#">Aim</FooterLink>
             <FooterLink href="#">Vision</FooterLink>
             <FooterLink href="#">Testimonials</FooterLink>
-            <FooterLink><Link to="/FAQ">FAQ</Link></FooterLink>
           </Column>
           <Column>
-            <Heading>Activities</Heading>
+            <Heading>Services</Heading>
             <FooterLink href="#">Writing</FooterLink>
             <FooterLink href="#">Internships</FooterLink>
             <FooterLink href="#">Coding</FooterLink>
@@ -31,10 +29,10 @@ const Footer = () => {
           </Column>
           <Column>
             <Heading>Contact Us</Heading>
-            <FooterLink href="#">hostel@cgec.org.in</FooterLink>
-            <FooterLink href="#">Tel: 03561 2546</FooterLink>
-            <FooterLink href="#">Mob: 1234567890</FooterLink>
-            <FooterLink href="#">Fax:1234567</FooterLink>
+            <FooterLink href="#">Uttar Pradesh</FooterLink>
+            <FooterLink href="#">Ahemdabad</FooterLink>
+            <FooterLink href="#">Indore</FooterLink>
+            <FooterLink href="#">Mumbai</FooterLink>
           </Column>
           <Column>
             <Heading>Social Media</Heading>

@@ -1,50 +1,9 @@
-.index{
-  background-color: 	#7E85FF;
-  
-}
-
 .main-container{
-  background-color: #161616;
-  clip-path: polygon(0% 40%, 100% 5%, 100% 100%,100% 100%, 0 100%);
+  color: blue;
+  text-align: center;
   align-items: center;
 }
-.indexTop{
-  /* float: left; */
-  position: absolute;
-  top: 4rem;
-  z-index: 1;
-}
 
-.typing-text{
-  color: yellow;
-}
-
-
-/* Hostel corner section */
-.hostel-corner{
-  margin-top: 10rem;
-  display: flex;
-}
-
-.hostel-corner .about, .principal-corner{
-  display: flex;
-}
-
-.img img{
-  border: 2px solid #7E85FF;
-  border-radius: 5rem;
-  margin: 20px;
-  margin-top: 0;
-  width: 6rem;
-  height: 6rem;
-}
-
-.main-container span{
-  color: #4f57eb;
-}
-
-
-/* About hostel card section */
 .cards{
   height: 100%;
   width: 85%;
@@ -62,9 +21,8 @@
 }
 
 .text{
-  color: white;
   height: 55%;
-  background-color: #161616;;
+  background-color: black;
   border-radius: 10px;
 }
 
@@ -73,27 +31,6 @@
 }
 
 @media (max-width: 1000px) {
-  .main-container{
-    background-color: #161616;
-    clip-path: polygon(0% 10%, 100% 5%, 100% 100%,100% 100%, 0 100%);
-    color: blue;
-    text-align: center;
-    align-items: center;
-  }
-
-  .img{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .img img{
-    width: 10rem;
-    height: 10rem;
-  }
-  .about-cards{
-    margin-top: 5rem;
-  }
   .cards{
     width: 100%;
     height: 20rem;
