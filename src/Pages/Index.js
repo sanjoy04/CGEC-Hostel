@@ -1,8 +1,7 @@
-
-import '../App.css';
+import "../App.css";
 import { useEffect } from "react";
-import Navbar_ from '../Components/Navbar';
-import Footer from '../Components/Footer';
+import Navbar_ from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 function Index() {
   useEffect(() => {
@@ -10,14 +9,10 @@ function Index() {
   });
 
   return (
-
     <div className="App">
       <Navbar_ />
       <Footer />
     </div>
-
   );
-
 }
 export default Index;
-
