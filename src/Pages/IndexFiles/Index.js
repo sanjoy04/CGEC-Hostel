@@ -1,4 +1,5 @@
 import "../../App.css";
+import { Link } from "react-router-dom";
 import "./Index.css";
 import { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar";
@@ -42,7 +43,7 @@ function Index() {
         <Heading>
           <span>HEY!!</span>
           <br />
-          <span>WELCOME TO SUKANTA CHHATRABAS</span>
+          <span>WELCOME TO SUKANTA CHHATRABAS CGEC</span>
           <br />
           <span>COME ON & LET'S ...</span>
         </Heading>
@@ -58,9 +59,9 @@ function Index() {
       </IndexTop>
       <MainContainer className="main-container">
         <RowIn1 className="hostel-corner">
-          <ColRowMain>
+          <ColRowMain className="ColRowMain">
             <h4>
-              About <span>Hostel</span>
+              <Link className="link" to="/About">About <span>Hostel</span></Link>
             </h4>
             <ColRow className="about">
               <div className="img">{<img src={cgec_hostel} alt= "Hostel"></img>}</div>
@@ -71,7 +72,7 @@ function Index() {
               </div>
             </ColRow>
           </ColRowMain>
-          <ColRowMain>
+          <ColRowMain className="ColRowMain">
             <h4>
               Principal's <span>Corner</span>
             </h4>

@@ -1,3 +1,4 @@
+import "./About.css";
 import Footer from "../../Components/Footer";
 import Navbar from "../../Components/Navbar";
 import { Container, Col } from "react-bootstrap";
@@ -10,37 +11,141 @@ import {
   Peoples,
   MainContainer,
   AboutTop,
+  RowIn1,
+  ColRowMain,
+  ColRow,
   Responsibitity,
   Heading2,
   Row,
-} from "./AbouStyles";
+} from "./AboutStyles";
+
+import medical from "../../images/cgec_principal.jpg";
+import hostel_room from "../../images/hostel.jpeg";
+import bathroom from "../../images/hostel-bathroom.jpg";
+import mess from "../../images/hostel1.jpg";
+import indoor from "../../images/hostel2.jpg";
+import outdoor from "../../images/hostel3.jpg";
 
 function About() {
   return (
-    <div className="App">
+    <div className="App About">
       <Navbar />
-      <MainContainer>
-        <AboutTop>
-          <Heading1>
-            <Typed
-              strings={["About the hostel", "Explore your Life!", "Good Luck!"]}
-              typeSpeed={70}
-              backSpeed={50}
-              loop
-            />
-          </Heading1>
-          <AboutText>
-            A hostel is a place where students live to study or for work. It is
-            usually supervised by a hostel manager and residents. Students
-            living in hostels experience their hostel life. These hostels
-            eventually became their homes. Hostels are primarily built, taking
-            into account the needs of struggling students and working-class
-            officials. It provides people with adequate housing, shelter, and
-            food at affordable prices. The hostel mainly consists of one bed, a
-            room shared by two or three people, a kitchen and a shared bathroom.
-          </AboutText>
-        </AboutTop>
-        <Responsibitity>
+      <AboutTop className="AboutTop">
+        <Heading1>
+          <span>HEY!!</span>
+          <br />
+          <span>YOU ARE ABOUT TO KNOW</span>
+          <br />
+          <span>LOTS OF THINGS ABOUT</span>
+        </Heading1>
+        <Heading1>
+          <Typed
+            className="typing-text"
+            strings={[" SUKANTA CHHATRABAS CGEC", " LET'S GO"]}
+            typeSpeed={120}
+            backSpeed={50}
+            loop
+          />
+        </Heading1>
+      </AboutTop>
+      <MainContainer className="MainContainer">
+        <RowIn1 className="Row TopRow">
+          <ColRowMain className="ColRowMain">
+            <h4>
+              Well furnished <span>Bed Rooms</span>
+            </h4>
+            <ColRow className="about">
+              <div className="img">
+                {<img src={hostel_room} alt="Hostel"></img>}
+              </div>
+              <div className="about-text">
+                We have world's top class hostel bedroom. Where there is no
+                almirah. And the room floor is rough welding floor. By any
+                chance if you fall down then Your body will burn.
+              </div>
+            </ColRow>
+          </ColRowMain>
+          <ColRowMain className="ColRowMain">
+            <h4>
+              Top Class <span>Canteen</span>
+            </h4>
+            <ColRow className="principal-corner">
+              <div className="img">
+                {<img src={mess} alt="Principal"></img>}
+              </div>
+              <div className="about-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                cupiditate quod saepe rerum quidem molestias praesentium facilis
+                labore
+              </div>
+            </ColRow>
+          </ColRowMain>
+        </RowIn1>
+        <RowIn1 className="Row">
+          <ColRowMain className="ColRowMain">
+            <h4>
+              Hygenic <span>Bathroom</span>
+            </h4>
+            <ColRow className="about">
+              <div className="img">
+                {<img src={bathroom} alt="Hostel"></img>}
+              </div>
+              <div className="about-text">
+              We have topclass bathrooms in the world where No one vomits in
+              the basin. Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit. Hic
+              </div>
+            </ColRow>
+          </ColRowMain>
+          <ColRowMain className="ColRowMain">
+            <h4>
+              Medical <span>Service</span>
+            </h4>
+            <ColRow className="principal-corner">
+              <div className="img">
+                {<img src={medical} alt="Principal"></img>}
+              </div>
+              <div className="about-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                cupiditate quod saepe rerum quidem molestias praesentium facilis
+                labore
+              </div>
+            </ColRow>
+          </ColRowMain>
+        </RowIn1>
+        <RowIn1 className="Row">
+          <ColRowMain className="ColRowMain">
+            <h4>
+              Indoor <span>Games</span>
+            </h4>
+            <ColRow className="about">
+              <div className="img">
+                {<img src={indoor} alt="Hostel"></img>}
+              </div>
+              <div className="about-text">
+                The college is situated in a prime location in the Cooch Behar
+                District. The college, being well connected from any part of the
+                Cooch Behar
+              </div>
+            </ColRow>
+          </ColRowMain>
+          <ColRowMain className="ColRowMain">
+            <h4>
+              Outdoor <span>Games</span>
+            </h4>
+            <ColRow className="principal-corner">
+              <div className="img">
+                {<img src={outdoor} alt="Principal"></img>}
+              </div>
+              <div className="about-text">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                cupiditate quod saepe rerum quidem molestias praesentium facilis
+                labore
+              </div>
+            </ColRow>
+          </ColRowMain>
+        </RowIn1>
+        {/*<Responsibitity>
           <Heading2>Persons with responsibilities</Heading2>
           <Container className="Container">
             <Row>
@@ -138,7 +243,7 @@ function About() {
               </Col>
             </Row>
           </Container>
-        </Responsibitity>
+  </Responsibitity>*/}
       </MainContainer>
       <Footer />
     </div>

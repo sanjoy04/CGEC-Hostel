@@ -20,14 +20,12 @@
 }
 
 
-/* Hostel corner section */
-.hostel-corner{
-  margin-top: 10rem;
-  display: flex;
-}
 
-.hostel-corner .about, .principal-corner{
-  display: flex;
+.ColRowMain{
+  border: 2px solid transparent;
+  border-radius: 0.35rem;
+  border-image: linear-gradient(to right, rgb(96, 96, 92), #161616 );
+  border-image-slice: 1;
 }
 
 .img img{
@@ -42,6 +40,16 @@
 .main-container span{
   color: #4f57eb;
 }
+
+.link{
+  text-decoration: none;
+  color: white;
+}
+
+/* .ColRowMain{
+  background: linear-gradient(114.7deg, rgb(39, 39, 42) -9.77%, rgb(24, 24, 27) 110.32%);
+  border: 2px solid, #818cf8;
+} */
 
 
 /* About hostel card section */
@@ -75,10 +83,17 @@
 @media (max-width: 1000px) {
   .main-container{
     background-color: #161616;
-    clip-path: polygon(0% 10%, 100% 5%, 100% 100%,100% 100%, 0 100%);
+    clip-path: polygon(0% 22%, 100% 6%, 100% 100%,100% 100%, 0 100%);
     color: blue;
     text-align: center;
     align-items: center;
+  }
+
+  .ColRowMain{
+    border: 2px solid transparent;
+    border-radius: 0.35rem;
+    border-image: linear-gradient(to top, rgb(96, 96, 92), #161616 ) !important;
+    border-image-slice: 1;
   }
 
   .img{
@@ -95,7 +110,7 @@
     margin-top: 5rem;
   }
   .cards{
-    width: 100%;
+    width: 90%;
     height: 20rem;
   }
 }

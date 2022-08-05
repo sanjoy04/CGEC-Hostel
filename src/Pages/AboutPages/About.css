@@ -1,0 +1,46 @@
+.About {
+    background-color: #7E85FF;
+}
+
+.MainContainer {
+    background-color: #161616;
+    clip-path: polygon(0% 30%, 75% 10%, 100% 20%, 100% 100%, 0% 100%);
+    align-items: center;
+}
+
+.AboutTop {
+    position: absolute;
+    /* margin: 0 7rem;
+    top: 4rem; */
+    z-index: 1;
+    text-align: left;
+}
+.ColRowMain{
+    border: 2px solid transparent;
+    border-radius: 0.35rem;
+    border-image: linear-gradient(to right, rgb(96, 96, 92), #161616 );
+    border-image-slice: 1;
+  }
+
+.TopRow{
+    /* margin-top: 20rem; */
+}
+
+h4 span{
+    color: yellowgreen;
+}
+
+
+
+@media (max-width: 1000px) {
+    .MainContainer {
+        background-color: #161616;
+        clip-path: polygon(0% 10%, 75% 5%, 100% 7%, 100% 100%, 0% 100%) !important;
+        align-items: center;
+    }
+
+
+    .TopRow{
+        margin-top: 20rem;
+    }
+  }

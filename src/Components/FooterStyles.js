@@ -39,7 +39,7 @@ export const Row = styled.div`
 
   @media (max-width: 1000px) {
     // grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 

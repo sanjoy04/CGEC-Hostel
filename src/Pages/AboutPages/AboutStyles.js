@@ -1,21 +1,81 @@
 import styled from "styled-components";
 
 export const MainContainer = styled.div`
-  padding-top: 110px;
+  padding-top: 20rem;
 `;
 
 export const AboutTop = styled.div`
   margin: 10px;
-  margin-right: 20px;
+  margin-left: 7rem;
+  margin-top: 7rem;
   margin-bottom: 20px;
   color: white;
   padding: 20px;
-  border-radius: 10px;
-  background-color: rgb(32, 35, 42, 0.5);
-  // background-color: rgb(255, 255, 255, 0.5);
-  box-shadow: 10px 10px rgb(184, 182, 184, 0.5);
-  text-align: center;
+  text-align: left;
   align-items: center;
+
+  @media (max-width: 767px) {
+    /* mobile */
+    margin-left: 1rem;
+    margin-top: 7rem;
+  }
+
+  @media (max-width: 991px) {
+    /* tablet */
+    margin-left: 1rem;
+    margin-top: 7rem;
+  }
+`;
+
+export const RowIn1 = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-item: center;
+  color: white;
+  margin: 0 7rem;
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-item: center;
+    margin: 0 2rem;
+  }
+`;
+
+export const ColRowMain = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-item: center;
+  justify-content: center;
+  text-align: center;
+  grid-gap: 30px;
+  width:50%;
+  padding: 1rem;
+  margin: 1rem;
+  background: linear-gradient(
+    114.7deg,
+    rgb(39, 39, 42) -9.77%,
+    rgb(24, 24, 27) 110.32%
+  );
+  border: 2px solid, red;
+  border-radius: 10px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    width:auto;
+  }
+`;
+export const ColRow = styled.div`
+  display: flex;
+  text-align: left;
+  // margin-left: 20px;
+  grid-gap: 1rem;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    grid-gap: 0.5rem;
+  }
 `;
 
 export const Responsibitity = styled.div`
