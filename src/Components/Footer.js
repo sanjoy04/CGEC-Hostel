@@ -20,7 +20,7 @@ const Footer = () => {
             <FooterLink href="#">Aim</FooterLink>
             <FooterLink href="#">Vision</FooterLink>
             <FooterLink href="#">Testimonials</FooterLink>
-            <FooterLink><Link to="/FAQ">FAQ</Link></FooterLink>
+            <FooterLink><Link className="link" to="/FAQ">FAQ</Link></FooterLink>
           </Column>
           <Column>
             <Heading>Activities</Heading>
