@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.logout {
+  margin: 15px;
+  align-self: flex-end;
+}
+.header {
+  position: absolute;
+  z-index: 1;
+  margin: 1rem;
+  color: white;
+  font-size: larger;
+}
+.itemContainer {
+  margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+  .itemContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .Row {
+    display: block !important;
+    /* : center !important; */
+  }
+  .Col {
+    margin-bottom: 15px;
+  }
+}

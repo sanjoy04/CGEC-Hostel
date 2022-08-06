@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  justify-content: center;
+}
+button {
+  margin: 15px;
+  align-self: center;
+}
+.header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  margin-top: 25px;
+  color: white;
+}
