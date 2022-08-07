@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
 import { Container, Button } from "react-bootstrap";
-import "./Contact.css";
+import styles from"./Contact.module.css";
 import Form from "react-bootstrap/Form";
 import Typed from "react-typed";
 import {
@@ -29,32 +29,24 @@ function Contact() {
     document.title = "Welcome to CGEC Boys Hostel";
   });
   return (
-    <div className="App Contact">
+    <div className= {styles.Contact}>
       <Navbar />
-      <HeadingTop className="HeadingTop">
+      <HeadingTop className={styles.HeadingTop}>
         <Heading1>
           <span>HEY!!</span>
           <br />
           <span>GOT A QUESTION?</span>
           <br />
-          <span className="yellow-line">FEEL FREE TO ASK</span>
+          <span className={styles.yellowLine}>FEEL FREE TO ASK</span>
         </Heading1>
-        {/*<Heading1>
-          <Typed
-            className="typing-text"
-            strings={[" SUKANTA CHHATRABAS CGEC", " LET'S GO"]}
-            typeSpeed={120}
-            backSpeed={50}
-            loop
-          />
-  </Heading1>*/}
+        
       </HeadingTop>
 
-      <MainContainer className="MainContainer">
-        <Container className="contact-body">
-          <RowIn1 className="contact">
-            <ColRowMain className="ColRowMain">
-              <Address class="info-content">
+      <MainContainer className={styles.MainContainer}>
+        <Container className={styles.contactBody}>
+          <RowIn1 className={styles.contact}>
+            <ColRowMain className={styles.ColRowMain}>
+              <Address class={styles.infoContent}>
                 <Heading>Address</Heading>
                 <Text class="text">
                   <Line>Harinchawra,</Line>
@@ -73,7 +65,7 @@ function Contact() {
                 </Text>
               </Address>
             </ColRowMain>
-            <ColRowMain className="ColRowMain">
+            <ColRowMain className={styles.ColRowMain}>
               <Phone class="info-content">
                 <Heading>Phone</Heading>
                 <Text class="text">
@@ -91,8 +83,8 @@ function Contact() {
                 </Text>
               </Phone>
             </ColRowMain>
-            <ColRowMain className="ColRowMain">
-              <Mail class="info-content">
+            <ColRowMain className={styles.ColRowMain}>
+              <Mail class={styles.infoContent}>
                 <Heading>Email</Heading>
                 <Text class="text">
                   <Line></Line>
@@ -104,7 +96,7 @@ function Contact() {
           <Row1 class="d-flex flex-row">
             <Col className="mt-3 col col-md-6">
               <iframe
-                className="form-body"
+                className={styles.formBody}
                 width="100%"
                 height="100%"
                 id="gmap_canvas"
@@ -116,7 +108,7 @@ function Contact() {
               ></iframe>
             </Col>
             <Col className="mt-3 col col-md-6">
-              <Form className="form-body">
+              <Form className={styles.formBody}>
                 <Body className="body">
                   <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Name</Form.Label>

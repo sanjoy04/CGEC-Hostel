@@ -22,9 +22,18 @@
     border-image-slice: 1;
   }
 
-.TopRow{
-    /* margin-top: 20rem; */
-}
+  .img img{
+    border: 2px solid #7E85FF;
+    border-radius: 5rem;
+    margin: 20px;
+    margin-top: 0;
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .typingText{
+    color: yellow;
+  }
 
 h4 span{
     color: yellowgreen;
@@ -39,8 +48,8 @@ h4 span{
         align-items: center;
     }
 
-
-    .TopRow{
-        margin-top: 20rem;
-    }
+    .img img{
+        width: 10rem;
+        height: 10rem;
+      }
   }

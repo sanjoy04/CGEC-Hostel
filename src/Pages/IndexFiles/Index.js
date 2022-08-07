@@ -1,6 +1,6 @@
 import "../../App.css";
 import { Link } from "react-router-dom";
-import "./Index.css";
+import styles from "./Index.module.css";
 import { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar";
 import Footer from "../../Components/Footer";
@@ -37,9 +37,9 @@ function Index() {
   });
 
   return (
-    <div className="App index">
+    <div className={styles.index}>
       <Navbar />
-      <IndexTop className="indexTop">
+      <IndexTop className={styles.indexTop}>
         <Heading>
           <span>HEY!!</span>
           <br />
@@ -49,7 +49,7 @@ function Index() {
         </Heading>
         <Heading>
           <Typed
-            className="typing-text"
+            className={styles.typingText}
             strings={[" STAY TOGETHER", " BUILD CAREER", " GROW TOGETHER"]}
             typeSpeed={100}
             backSpeed={50}
@@ -57,28 +57,28 @@ function Index() {
           />
         </Heading>
       </IndexTop>
-      <MainContainer className="main-container">
-        <RowIn1 className="hostel-corner">
-          <ColRowMain className="ColRowMain">
+      <MainContainer className={styles.mainContainer}>
+        <RowIn1 className={styles.hostelCorner}>
+          <ColRowMain className={styles.ColRowMain}>
             <h4>
-              <Link className="link" to="/About">About <span>Hostel</span></Link>
+              <Link className={styles.link} to="/About">About <span>Hostel</span></Link>
             </h4>
-            <ColRow className="about">
-              <div className="img">{<img src={cgec_hostel} alt= "Hostel"></img>}</div>
-              <div className="about-text">
+            <ColRow className={styles.about}>
+              <div className={styles.img}>{<img src={cgec_hostel} alt= "Hostel"></img>}</div>
+              <div className={styles.aboutText}>
                 The college is situated in a prime location in the Cooch Behar
                 District. The college, being well connected from any part of the
                 Cooch Behar
               </div>
             </ColRow>
           </ColRowMain>
-          <ColRowMain className="ColRowMain">
+          <ColRowMain className={styles.ColRowMain}>
             <h4>
               Principal's <span>Corner</span>
             </h4>
-            <ColRow className="principal-corner">
-              <div className="img">{<img src={cgec_principal} alt="Principal"></img>}</div>
-              <div className="about-text">
+            <ColRow className={styles.principalCorner}>
+              <div className={styles.img}>{<img src={cgec_principal} alt="Principal"></img>}</div>
+              <div className={styles.aboutText}>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
                 cupiditate quod saepe rerum quidem molestias praesentium facilis
                 labore 
@@ -88,27 +88,27 @@ function Index() {
         </RowIn1>
       </MainContainer>
 
-      <RowIn className="about-cards">
-        <Col className="section">
-          <div className="cards">
-            <div className="image">{<img src={hostel_rooms}></img>}</div>
-            <div className="text">
+      <RowIn className={styles.aboutCards}>
+        <Col className={styles.section}>
+          <div className={styles.cards}>
+            <div className={styles.image}>{<img src={hostel_rooms}></img>}</div>
+            <div className={styles.text}>
               <p>In our hostel we have total 60 bed rooms</p>
             </div>
           </div>
         </Col>
-        <Col className="section">
-          <div className="cards">
-            <div className="image">{<img src={hostel_beds}></img>}</div>
-            <div className="text">
+        <Col className={styles.section}>
+          <div className={styles.cards}>
+            <div className={styles.image}>{<img src={hostel_beds}></img>}</div>
+            <div className={styles.text}>
               <p>There we have 180 student capacity in our hostel</p>
             </div>
           </div>
         </Col>
-        <Col className="section">
-          <div className="cards">
-            <div className="image">{<img src={ragging_free}></img>}</div>
-            <div className="text">
+        <Col className={styles.section}>
+          <div className={styles.cards}>
+            <div className={styles.image}>{<img src={ragging_free}></img>}</div>
+            <div className={styles.text}>
               <p>Your hostell is completly ragging free</p>
             </div>
           </div>

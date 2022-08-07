@@ -3,7 +3,7 @@
   
 }
 
-.main-container{
+.mainContainer{
   background-color: #161616;
   clip-path: polygon(0% 40%, 100% 5%, 100% 100%,100% 100%, 0 100%);
   align-items: center;
@@ -15,7 +15,7 @@
   z-index: 1;
 }
 
-.typing-text{
+.typingText{
   color: yellow;
 }
 
@@ -37,7 +37,7 @@
   height: 6rem;
 }
 
-.main-container span{
+.mainContainer span{
   color: #4f57eb;
 }
 
@@ -81,7 +81,7 @@
 }
 
 @media (max-width: 1000px) {
-  .main-container{
+  .mainContainer{
     background-color: #161616;
     clip-path: polygon(0% 22%, 100% 6%, 100% 100%,100% 100%, 0 100%);
     color: blue;
@@ -106,7 +106,7 @@
     width: 10rem;
     height: 10rem;
   }
-  .about-cards{
+  .aboutCards{
     margin-top: 5rem;
   }
   .cards{

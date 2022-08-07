@@ -1,5 +1,5 @@
 import "../../App.css";
-import "./Home.css";
+import styles from "./Home.module.css";
 import { useEffect, useState } from "react";
 import swal from "sweetalert";
 import Navbar from "../../Components/Navbar";
@@ -206,33 +206,33 @@ function Home() {
         <Navbar />
 
         <div className="fullBody">
-          <Container className="home-body">
-            <div className="body">
+          <Container className={styles.homeBody}>
+            <div className={styles.body}>
               <Row>
                 <Col sm={8} className="complain-section">
                   <RowIn>
-                    <Col className="section">
-                      <div className="outerCard" onClick={handleRoomChangeShow}>
-                        <span className="card ">
-                          <img src={room_change}></img>
+                    <Col className={styles.section}>
+                      <div className={styles.outerCard} onClick={handleRoomChangeShow}>
+                        <span className={styles.card}>
+                          <img className={styles.img} src={room_change}></img>
                         </span>
-                        <span className="heading">Room Change Request</span>
+                        <span className={styles.heading}>Room Change Request</span>
                       </div>
                     </Col>
-                    <Col className="section">
-                      <div className="outerCard" onClick={handleComplainShow}>
-                        <span className="card ">
-                          <img src={complain_box}></img>
+                    <Col className={styles.section}>
+                      <div className={styles.outerCard} onClick={handleComplainShow}>
+                        <span className={styles.card}>
+                          <img className={styles.img} src={complain_box}></img>
                         </span>
-                        <span className="heading">Complaint Box</span>
+                        <span className={styles.heading}>Complaint Box</span>
                       </div>
                     </Col>
-                    <Col className="section">
-                      <div className="outerCard" onClick={handleMealShow}>
-                        <span className="card ">
-                          <img src={food}></img>
+                    <Col className={styles.section}>
+                      <div className={styles.outerCard} onClick={handleMealShow}>
+                        <span className={styles.card}>
+                          <img className={styles.img} src={food}></img>
                         </span>
-                        <span className="heading">
+                        <span className={styles.heading}>
                           Meal Start- Stop Request
                         </span>
                       </div>
@@ -240,7 +240,7 @@ function Home() {
                   </RowIn>
                 </Col>
                 <Col sm={4}>
-                  <div className="notice">
+                  <div className={styles.notice}>
                     <h3>Notice</h3>
                     <p>Notice</p>
                     <p>Notice</p>
@@ -265,6 +265,7 @@ function Home() {
           <IndexTop>
             <Heading>
               <Typed
+                
                 strings={[
                   "Hey!!!  Welcome to Sukanta Chhatrabas",
                   "Explore your Life!",

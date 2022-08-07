@@ -72,7 +72,6 @@ export const ColRowMain = styled.div`
   align-item: center;
   justify-content: center;
   text-align: center;
-  grid-gap: 30px;
   padding: 1rem;
   margin:1rem;
   background: linear-gradient(114.7deg, rgb(39, 39, 42) -9.77%, rgb(24, 24, 27) 110.32%);
