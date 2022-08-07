@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logout {
+  margin: 15px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 5px;
+  align-self: flex-end;
+  background-color: rgb(27, 27, 27);
+}
+
+.logout:hover {
+  background-color: rgb(95, 93, 93);
+}
+
+.header {
+  position: absolute;
+  z-index: 1;
+  margin: 1rem;
+  color: white;
+  font-size: larger;
+}

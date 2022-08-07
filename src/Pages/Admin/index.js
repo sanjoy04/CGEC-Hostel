@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getAdminEmail } from "../../utils/storage";
 import style from "./style.module.css";
 import { Link } from "react-router-dom";
+import AdminNav from "../../Components/AdminNavbar";
 
 function Index() {
   const route = useNavigate();
@@ -14,8 +15,7 @@ function Index() {
   });
   return (
     <div className={style.container}>
-      <div className={style.header}>Welcome Admin</div>
-      <div className={style.logout}>logout</div>
+      <AdminNav />
       <div className={style.itemContainer}>
         <Row className={style.Row}>
           <Col className={style.Col}>
