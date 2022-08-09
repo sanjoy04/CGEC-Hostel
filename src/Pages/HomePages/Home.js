@@ -202,14 +202,14 @@ function Home() {
 
   return (
     <>
-      <div className="App">
+      <div className={styles.home}>
         <Navbar />
 
-        <div className="fullBody">
+        <div className={styles.fullBody}>
           <Container className={styles.homeBody}>
             <div className={styles.body}>
               <Row>
-                <Col sm={8} className="complain-section">
+                <Col className="complain-section">
                   <RowIn>
                     <Col className={styles.section}>
                       <div className={styles.outerCard} onClick={handleRoomChangeShow}>
@@ -225,6 +225,16 @@ function Home() {
                           <img className={styles.img} src={complain_box}></img>
                         </span>
                         <span className={styles.heading}>Complaint Box</span>
+                      </div>
+                    </Col>
+                    <Col className={styles.section}>
+                      <div className={styles.outerCard} onClick={handleMealShow}>
+                        <span className={styles.card}>
+                          <img className={styles.img} src={food}></img>
+                        </span>
+                        <span className={styles.heading}>
+                          Meal Start- Stop Request
+                        </span>
                       </div>
                     </Col>
                     <Col className={styles.section}>
@@ -261,8 +271,8 @@ function Home() {
           </Container>
         </div>
 
-        <MainContainer className="main-container">
-          <IndexTop>
+        <MainContainer className={styles.mainContainer}>
+          {/* <IndexTop>
             <Heading>
               <Typed
                 
@@ -290,7 +300,7 @@ function Home() {
               nihil maxime soluta ipsum fugit nostrum id aliquid facilis in,
               voluptatibus deleniti.
             </AboutText>
-          </IndexTop>
+          </IndexTop> */}
         </MainContainer>
 
         <Footer />
