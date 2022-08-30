@@ -28,7 +28,6 @@ import outdoor from "../../images/hostel3.jpg";
 
 function About() {
   return (
-
     <div className={styles.About}>
       <Navbar />
       <AboutTop className={styles.AboutTop}>
@@ -70,7 +69,7 @@ function About() {
             <h4>
               Top Class <span>Canteen</span>
             </h4>
-            <ColRow >
+            <ColRow>
               <div className={styles.img}>
                 {<img src={mess} alt="Principal"></img>}
               </div>
@@ -83,7 +82,7 @@ function About() {
           </ColRowMain>
         </RowIn1>
         <RowIn1 className={styles.Row}>
-          <ColRowMain >
+          <ColRowMain className={styles.ColRowMain}>
             <h4>
               Hygenic <span>Bathroom</span>
             </h4>
@@ -92,9 +91,9 @@ function About() {
                 {<img src={bathroom} alt="Hostel"></img>}
               </div>
               <div>
-              We have topclass bathrooms in the world where No one vomits in
-              the basin. Lorem ipsum, dolor sit amet consectetur adipisicing
-              elit. Hic
+                We have topclass bathrooms in the world where No one vomits in
+                the basin. Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit. Hic
               </div>
             </ColRow>
           </ColRowMain>
@@ -102,11 +101,11 @@ function About() {
             <h4>
               Medical <span>Service</span>
             </h4>
-            <ColRow >
+            <ColRow>
               <div className={styles.img}>
                 {<img src={medical} alt="Principal"></img>}
               </div>
-              <div >
+              <div>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
                 cupiditate quod saepe rerum quidem molestias praesentium facilis
                 labore
@@ -134,7 +133,7 @@ function About() {
             <h4>
               Outdoor <span>Games</span>
             </h4>
-            <ColRow >
+            <ColRow>
               <div className={styles.img}>
                 {<img src={outdoor} alt="Principal"></img>}
               </div>
