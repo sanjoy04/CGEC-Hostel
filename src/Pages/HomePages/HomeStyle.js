@@ -39,7 +39,7 @@ grid-gap: 30px;
 
 export const RowIn = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
 
   @media (max-width: 1000px) {
@@ -66,9 +66,18 @@ export const InnerBox = styled.div`
 
 
 export const MainContainer = styled.div`
+  padding-top: 30rem;
   color: rgb(255, 255, 255);
-  height: 100%;
+  height: 60rem;
   text-align: centre;
+  background-color: #161616;
+    clip-path: polygon(0% 30%, 75% 10%, 100% 20%, 100% 100%, 0% 100%);
+    // clip-path: polygon(0 19rem, 69rem 6rem, 100rem 15rem, 100rem 100rem, 0 100rem);
+
+  @media (max-width: 1000px) {
+    padding-top: 53rem;
+    clip-path: polygon(0% 10%, 75% 5%, 100% 7%, 100% 100%, 0% 100%);
+  }
 `;
 
 export const IndexTop = styled.div`
