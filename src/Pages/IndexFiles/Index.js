@@ -61,10 +61,14 @@ function Index() {
         <RowIn1 className={styles.hostelCorner}>
           <ColRowMain className={styles.ColRowMain}>
             <h4>
-              <Link className={styles.link} to="/About">About <span>Hostel</span></Link>
+              <Link className={styles.link} to="/About">
+                About <span>Hostel</span>
+              </Link>
             </h4>
             <ColRow className={styles.about}>
-              <div className={styles.img}>{<img src={cgec_hostel} alt= "Hostel"></img>}</div>
+              <div className={styles.img}>
+                {<img src={cgec_hostel} alt="Hostel"></img>}
+              </div>
               <div className={styles.aboutText}>
                 The college is situated in a prime location in the Cooch Behar
                 District. The college, being well connected from any part of the
@@ -77,43 +81,56 @@ function Index() {
               Principal's <span>Corner</span>
             </h4>
             <ColRow className={styles.principalCorner}>
-              <div className={styles.img}>{<img src={cgec_principal} alt="Principal"></img>}</div>
+              <div className={styles.img}>
+                {<img src={cgec_principal} alt="Principal"></img>}
+              </div>
               <div className={styles.aboutText}>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
                 cupiditate quod saepe rerum quidem molestias praesentium facilis
-                labore 
+                labore
               </div>
             </ColRow>
           </ColRowMain>
         </RowIn1>
       </MainContainer>
 
-      <RowIn className={styles.aboutCards}>
-        <Col className={styles.section}>
-          <div className={styles.cards}>
-            <div className={styles.image}>{<img src={hostel_rooms}></img>}</div>
-            <div className={styles.text}>
-              <p>In our hostel we have total 60 bed rooms</p>
+      <div className={styles.aboutCardsSection}>
+        <RowIn className={styles.aboutCards}>
+          <Col className={styles.section}>
+            <div className={styles.cards}>
+              <div className={styles.image}>
+                {<img src={hostel_rooms}></img>}
+              </div>
+              <div className={styles.text}>
+                <p>In our hostel we have total 60 bed rooms</p>
+              </div>
             </div>
-          </div>
-        </Col>
-        <Col className={styles.section}>
-          <div className={styles.cards}>
-            <div className={styles.image}>{<img src={hostel_beds}></img>}</div>
-            <div className={styles.text}>
-              <p>There we have 180 student capacity in our hostel</p>
+          </Col>
+          <Col className={styles.section}>
+            <div className={styles.cards}>
+              <div className={styles.image}>
+                {<img src={hostel_beds}></img>}
+              </div>
+              <div className={styles.text}>
+                <p>There we have 180 student capacity in our hostel</p>
+              </div>
             </div>
-          </div>
-        </Col>
-        <Col className={styles.section}>
-          <div className={styles.cards}>
-            <div className={styles.image}>{<img src={ragging_free}></img>}</div>
-            <div className={styles.text}>
-              <p>Your hostell is completly ragging free</p>
+          </Col>
+          <Col className={styles.section}>
+            <div className={styles.cards}>
+              <div className={styles.image}>
+                {<img src={ragging_free}></img>}
+              </div>
+              <div className={styles.text}>
+                <p>Your hostell is completly ragging free</p>
+              </div>
             </div>
-          </div>
-        </Col>
-      </RowIn>
+          </Col>
+        </RowIn>
+      </div>
+      <div className={styles.homeImage}>
+        {<img src={cgec_hostel} alt="Hostel"></img>}
+      </div>
       <Footer />
     </div>
   );

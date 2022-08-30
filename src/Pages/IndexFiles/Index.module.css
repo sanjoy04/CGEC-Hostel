@@ -53,6 +53,10 @@
 
 
 /* About hostel card section */
+
+.aboutCardsSection{
+  background-color: rgb(39, 62, 93);
+}
 .cards{
   height: 100%;
   width: 85%;
@@ -78,6 +82,15 @@
 
 .text p{
   padding: 30px;
+}
+
+
+.homeImage{
+  height: 30rem;
+}
+.homeImage img{
+  height: 100%;
+  width: 100%;
 }
 
 @media (max-width: 1000px) {
@@ -112,5 +125,9 @@
   .cards{
     width: 90%;
     height: 20rem;
+  }
+
+  .homeImage{
+    height: 15rem;
   }
 }

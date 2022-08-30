@@ -64,4 +64,5 @@ export const Heading = styled.p`
 
 export const FooterEndText = styled.p`
   text-align: center;
+  color:	rgb(236, 236, 236);
 `;

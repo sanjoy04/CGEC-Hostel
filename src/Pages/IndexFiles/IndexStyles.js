@@ -7,33 +7,33 @@ export const MainContainer = styled.div`
 `;
 
 export const IndexTop = styled.div`
-  margin:60px;
+  margin: 60px;
   color: white;
   margin-left: 6rem;
   padding: 40px;
   text-align: left;
   @media (max-width: 767px) {
     /* mobile */
-    margin:60px 0;
-}
+    margin: 60px 0;
+  }
 
-@media (max-width: 991px) {
+  @media (max-width: 991px) {
     /* tablet */
-    margin:60px 0;
-}
+    margin: 60px 0;
+  }
 `;
 
 export const Heading = styled.h3`
   margin-bottom: 20px;
   font-weight: bold;
-  color:white;
+  color: white;
 `;
 export const AboutText = styled.p`
   margin-bottom: 20px;
   font-size: 24px;
-  background: rgb(0,0,0,0.5);
+  background: rgb(0, 0, 0, 0.5);
   padding: 20px;
-  border-radius:10px;
+  border-radius: 10px;
 
   @media (max-width: 767px) {
     /* mobile */
@@ -44,17 +44,15 @@ export const AboutText = styled.p`
     /* tablet */
     font-size: 18px;
   }
-
 `;
 export const RowIn1 = styled.div`
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-item: center;
-  margin:7rem;
+  margin: 7rem;
   margin-top: 20rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
   padding-bottom: 3rem;
-  
 
   @media (max-width: 1000px) {
     display: grid;
@@ -73,8 +71,12 @@ export const ColRowMain = styled.div`
   justify-content: center;
   text-align: center;
   padding: 1rem;
-  margin:1rem;
-  background: linear-gradient(114.7deg, rgb(39, 39, 42) -9.77%, rgb(24, 24, 27) 110.32%);
+  margin: 1rem;
+  background: linear-gradient(
+    114.7deg,
+    rgb(39, 39, 42) -9.77%,
+    rgb(24, 24, 27) 110.32%
+  );
   border: 2px solid, red;
   border-radius: 10px;
 
@@ -91,20 +93,20 @@ export const ColRow = styled.div`
   @media (max-width: 1000px) {
     flex-direction: column;
     grid-gap: 0.5rem;
-
   }
 `;
 export const RowIn = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  algn-item: center;
   grid-gap: 30px;
   margin: 0 10rem;
-  margin-bottom: 20px;
+  padding: 3rem 0;
 
   @media (max-width: 1000px) {
     grid-template-columns: repeat(1, 1fr);
     margin: 0 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 `;
 
