@@ -9,7 +9,7 @@ import {
   Spinner,
 } from "react-bootstrap";
 import swal from "sweetalert";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Nav.css";
 import { API_URL } from "../Constants";
 
@@ -41,6 +41,8 @@ export default function Navbar_() {
     setLoginPassword("");
   };
 
+  const location = useLocation();
+
   useEffect(() => {
     const loggedin = localStorage.getItem("email");
     if (loggedin) {
@@ -56,8 +58,10 @@ export default function Navbar_() {
   }, [warning]);
 
   useEffect(() => {
-    console.log(selectedItems);
-  }, [selectedItems]);
+    // console.log("selected: " + selectedItems);
+    console.log(location.pathname);
+    setSelectedItems(location.pathname.substring(1));
+  }, [location]);
 
   const handleCloseRegister = () => setShow2(false);
   const handleShowRegister = () => {
@@ -121,7 +125,7 @@ export default function Navbar_() {
   useEffect(() => {
     const intervalID = setInterval(shuffle, 3000);
     return () => clearInterval(intervalID);
-  }, [shuffle]);
+  });
 
   return (
     <>
@@ -143,17 +147,29 @@ export default function Navbar_() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse className="right_align" id="responsive-navbar-nav">
             <Nav className="nav_elements">
-              <Nav.Link>
-                <Link className="link" to={"/Gallery"}>
+              <Nav.Link
+              // onClick={() => {
+              //   setSelectedItems("Gallery");
+              // }}
+              // as={Link}
+              >
+                <Link
+                  className="link"
+                  to={"/Gallery"}
+                  style={{
+                    textDecorationLine:
+                      selectedItems === "Gallery" ? "underline" : "none",
+                  }}
+                >
                   Gallery
                 </Link>
               </Nav.Link>
 
               <Nav.Link
-                onClick={() => {
-                  console.log("About pressed");
-                  setSelectedItems("About");
-                }}
+              // onClick={() => {
+              //   setSelectedItems("About");
+              // }}
+              // as={Link}
               >
                 <Link
                   className="link"
@@ -166,9 +182,11 @@ export default function Navbar_() {
                   About
                 </Link>
               </Nav.Link>
-              
 
-              <Nav.Link onClick={() => setSelectedItems("Facilities")}>
+              <Nav.Link
+              // as={Link}
+              // onClick={() => setSelectedItems("Facilities")}
+              >
                 <Link
                   className="link"
                   to={"/Facilities"}
@@ -180,7 +198,10 @@ export default function Navbar_() {
                   Facilities
                 </Link>
               </Nav.Link>
-              <Nav.Link onClick={() => setSelectedItems("Contact")}>
+              <Nav.Link
+              // as={Link}
+              // onClick={() => setSelectedItems("Contact")}
+              >
                 <Link
                   className="link"
                   to={"/Contact"}
