@@ -27,9 +27,25 @@ export default function Navbar_() {
 
   const [warning, setWarning] = useState();
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
 
   const navigate = useNavigate(); //dynamically redirect to another page
   const [newName, setnewName] = useState("");
+=======
+
+  const [selectedItems, setSelectedItems] = useState("");
+
+  // for signup
+  const [registerName, setRegisterName] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPhone, setRegisterPhone] = useState("");
+  const [semester, setSemester] = useState("");
+  const [department, setDepartment] = useState("");
+  const [roll, setRoll] = useState("");
+
+  const navigate = useNavigate(); //dynamically redirect to another page
+>>>>>>> 3d9d3550a98502043b0dba5fa4c7f3d6d4562fb9
 
   const handleCloseLogin = () => setShow1(false);
   const handleShowLogin = () => {
@@ -52,6 +68,10 @@ export default function Navbar_() {
       setWarning();
     }
   }, [warning]);
+
+  useEffect(() => {
+    console.log(selectedItems);
+  }, [selectedItems]);
 
   const handleCloseRegister = () => setShow2(false);
   const handleShowRegister = () => {
@@ -107,6 +127,16 @@ export default function Navbar_() {
       });
   }
 
+<<<<<<< HEAD
+=======
+  function signup() {
+    // "password": registerPassword,
+    // "semester": semester,
+    // "department": ,
+    // "name": registerName
+  }
+
+>>>>>>> 3d9d3550a98502043b0dba5fa4c7f3d6d4562fb9
   //for randomly cahnge the title
 
   const shuffle = useCallback(() => {
@@ -114,6 +144,14 @@ export default function Navbar_() {
     setnewName(names[index]);
   }, []);
 
+<<<<<<< HEAD
+=======
+  const shuffle = useCallback(() => {
+    const index = Math.floor(Math.random() * names.length);
+    setnewName(names[index]);
+  }, []);
+
+>>>>>>> 3d9d3550a98502043b0dba5fa4c7f3d6d4562fb9
   useEffect(() => {
     const intervalID = setInterval(shuffle, 3000);
     return () => clearInterval(intervalID);
@@ -140,23 +178,61 @@ export default function Navbar_() {
           <Navbar.Collapse className="right_align" id="responsive-navbar-nav">
             <Nav className="nav_elements">
               <Nav.Link>
+<<<<<<< HEAD
                 <Link className="link" to={"/Gallery"}>
+=======
+                <Link
+                  className="link"
+                  to={""}
+                  // style={{
+                  //   textDecorationLine:
+                  //     selectedItems == "Contact" ? "underline" : "none",
+                  // }}
+                >
+>>>>>>> 3d9d3550a98502043b0dba5fa4c7f3d6d4562fb9
                   Gallery
                 </Link>
               </Nav.Link>
 
-              <Nav.Link>
-                <Link className="link" to={"/About"}>
+              <Nav.Link
+                onClick={() => {
+                  console.log("About pressed");
+                  setSelectedItems("About");
+                }}
+              >
+                <Link
+                  className="link"
+                  to={"/About"}
+                  style={{
+                    textDecorationLine:
+                      selectedItems === "About" ? "underline" : "none",
+                  }}
+                >
                   About
                 </Link>
               </Nav.Link>
-              <Nav.Link>
-                <Link className="link" to={"/Facilities"}>
+
+              <Nav.Link onClick={() => setSelectedItems("Facilities")}>
+                <Link
+                  className="link"
+                  to={"/Facilities"}
+                  style={{
+                    textDecorationLine:
+                      selectedItems === "Facilities" ? "underline" : "none",
+                  }}
+                >
                   Facilities
                 </Link>
               </Nav.Link>
-              <Nav.Link>
-                <Link className="link" to={"/Contact"}>
+              <Nav.Link onClick={() => setSelectedItems("Contact")}>
+                <Link
+                  className="link"
+                  to={"/Contact"}
+                  style={{
+                    textDecorationLine:
+                      selectedItems === "Contact" ? "underline" : "none",
+                  }}
+                >
                   Contact
                 </Link>
               </Nav.Link>
@@ -233,6 +309,109 @@ export default function Navbar_() {
               </Button>
             )}
           </div>
+<<<<<<< HEAD
+=======
+
+          <Form.Text className="text-muted d-flex justify-content-center mt-3">
+            Don't have an account?{" "}
+            <Link to onClick={handleShowRegister}>
+              Register
+            </Link>
+          </Form.Text>
+        </Form>
+      </Modal>
+
+      {/* Register modal */}
+      <Modal
+        show={show2}
+        size="lg"
+        onHide={handleCloseRegister}
+        animation={true}
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Register</Modal.Title>
+        </Modal.Header>
+        <Form style={styles.form2style}>
+          {/* name of the form */}
+          <div class="row">
+            <Form.Group className="mb-1 col col-md-6" controlId="text">
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" placeholder="Enter name" />
+            </Form.Group>
+            {/* email of the form */}
+            <Form.Group
+              className="mb-1 col col-md-6"
+              controlId="formBasicEmail"
+            >
+              <Form.Label>Email address</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" />
+            </Form.Group>
+          </div>
+
+          <div class="row">
+            <Form.Group className="mb-1 col col-md-6" controlId="number">
+              <Form.Label>Roll No</Form.Label>
+              <Form.Control type="numeric" placeholder="Enter roll no" />
+            </Form.Group>
+            {/* Year of the form */}
+            <Form.Group className="mb-1 col col-md-6" controlId="text">
+              <Form.Label>Departent</Form.Label>
+              <Form.Control type="text" placeholder="Enter year" />
+            </Form.Group>
+          </div>
+
+          <div class="row">
+            {/* Semester of the form */}
+            <Form.Group className="mb-1 col col-md-6" controlId="text">
+              <Form.Label>Semester</Form.Label>
+              <Form.Control type="text" placeholder="Enter Semester" />
+            </Form.Group>
+            {/* mobile no of the form */}
+            <Form.Group className="mb-1 col col-md-6" controlId="number">
+              <Form.Label>Mobile No</Form.Label>
+              <Form.Control type="numeric" placeholder="Enter mobile no" />
+            </Form.Group>
+          </div>
+
+          <div class="row">
+            {/* password of the form */}
+            <Form.Group
+              className="mb-1 col col-md-6"
+              controlId="formBasicPassword"
+            >
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" />
+            </Form.Group>
+            {/* Confirm password */}
+            <Form.Group
+              className="mb-1 col col-md-6"
+              controlId="formBasicPassword"
+            >
+              <Form.Label>Confirm Password</Form.Label>
+              <Form.Control
+                onChange={(e) => console.log(e.target.value)}
+                type="password"
+                placeholder="Confirm Password"
+              />
+            </Form.Group>
+          </div>
+
+          <div
+            className="d-flex justify-content-center mt-3"
+            onClick={handleCloseRegister}
+          >
+            <Button variant="primary" type="submit" size="lg">
+              Register
+            </Button>
+          </div>
+          <Form.Text className="text-muted d-flex justify-content-center mt-3">
+            Already have an account?{" "}
+            <Link to onClick={handleShowLogin}>
+              Login
+            </Link>
+          </Form.Text>
+>>>>>>> 3d9d3550a98502043b0dba5fa4c7f3d6d4562fb9
         </Form>
       </Modal>
     </>
