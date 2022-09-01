@@ -8,6 +8,7 @@ import About from "./Pages/AboutPages/About";
 import Contact from "./Pages/ContactPages/Contact";
 import Home from "./Pages/HomePages/Home";
 import Facilities from "./Pages/FacilitiesPages/Facilities";
+import Gallery from "./Pages/GalleryPages/Gallery";
 import FAQ from "./Pages/FAQ";
 import Complain from "./Pages/Admin/Complains";
 import Login from "./Pages/Admin/Login";
@@ -28,6 +29,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/Home" element={<Home />} />
+        <Route path="/Gallery" element={<Gallery />} />
         <Route path="/*" element={<Index />} />
         <Route path="/Facilities" element={<Facilities />} />
         <Route path="/FAQ" element={<FAQ />} />
