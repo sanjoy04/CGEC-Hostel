@@ -32,7 +32,7 @@ export const FacilitiesTop = styled.div`
 export const RowIn1 = styled.div`
   display: flex;
   justify-content: space-between;
-  align-item: center;
+  align-items: center;
   color: white;
   margin: 0 7rem;
 
@@ -40,7 +40,7 @@ export const RowIn1 = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-item: center;
+    align-items: center;
     margin: 0 2rem;
   }
 `;
@@ -48,7 +48,7 @@ export const RowIn1 = styled.div`
 export const ColRowMain = styled.div`
   display: flex;
   flex-direction: column;
-  align-item: center;
+  align-items: center;
   justify-content: center;
   text-align: center;
   grid-gap: 30px;
@@ -60,7 +60,7 @@ export const ColRowMain = styled.div`
     rgb(39, 39, 42) -9.77%,
     rgb(24, 24, 27) 110.32%
   );
-  border: 2px solid, red;
+  //border: 2px solid red;
   border-radius: 10px;
 
   @media (max-width: 1000px) {

@@ -19,7 +19,7 @@ const Footer = () => {
             <Heading>About Us</Heading>
             <FooterLink href="#">Aim</FooterLink>
             <FooterLink href="#">Vision</FooterLink>
-            <FooterLink href="#">Testimonials</FooterLink>
+            <FooterLink><Link className="link" to="/Team">Developer Team</Link></FooterLink>
             <FooterLink><Link className="link" to="/FAQ">FAQ</Link></FooterLink>
           </Column>
           <Column>
