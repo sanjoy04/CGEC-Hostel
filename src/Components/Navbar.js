@@ -27,10 +27,16 @@ export default function Navbar_() {
 
   const [warning, setWarning] = useState();
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
+
+  const navigate = useNavigate(); //dynamically redirect to another page
+  const [newName, setnewName] = useState("");
+=======
 
   const [selectedItems, setSelectedItems] = useState("");
 
   const navigate = useNavigate(); //dynamically redirect to another page
+>>>>>>> 3d9d3550a98502043b0dba5fa4c7f3d6d4562fb9
 
   const handleCloseLogin = () => setShow1(false);
   const handleShowLogin = () => {
@@ -112,6 +118,8 @@ export default function Navbar_() {
       });
   }
 
+<<<<<<< HEAD
+=======
   function signup() {
     // "password": registerPassword,
     // "semester": semester,
@@ -119,15 +127,22 @@ export default function Navbar_() {
     // "name": registerName
   }
 
+>>>>>>> 3d9d3550a98502043b0dba5fa4c7f3d6d4562fb9
   //for randomly cahnge the title
-
-  const [newName, setnewName] = useState("");
 
   const shuffle = useCallback(() => {
     const index = Math.floor(Math.random() * names.length);
     setnewName(names[index]);
   }, []);
 
+<<<<<<< HEAD
+=======
+  const shuffle = useCallback(() => {
+    const index = Math.floor(Math.random() * names.length);
+    setnewName(names[index]);
+  }, []);
+
+>>>>>>> 3d9d3550a98502043b0dba5fa4c7f3d6d4562fb9
   useEffect(() => {
     const intervalID = setInterval(shuffle, 3000);
     return () => clearInterval(intervalID);
@@ -154,6 +169,9 @@ export default function Navbar_() {
           <Navbar.Collapse className="right_align" id="responsive-navbar-nav">
             <Nav className="nav_elements">
               <Nav.Link>
+<<<<<<< HEAD
+                <Link className="link" to={"/Gallery"}>
+=======
                 <Link
                   className="link"
                   to={""}
@@ -162,6 +180,7 @@ export default function Navbar_() {
                   //     selectedItems == "Contact" ? "underline" : "none",
                   // }}
                 >
+>>>>>>> 3d9d3550a98502043b0dba5fa4c7f3d6d4562fb9
                   Gallery
                 </Link>
               </Nav.Link>
@@ -281,6 +300,8 @@ export default function Navbar_() {
               </Button>
             )}
           </div>
+<<<<<<< HEAD
+=======
 
           <Form.Text className="text-muted d-flex justify-content-center mt-3">
             Don't have an account?{" "}
@@ -381,6 +402,7 @@ export default function Navbar_() {
               Login
             </Link>
           </Form.Text>
+>>>>>>> 3d9d3550a98502043b0dba5fa4c7f3d6d4562fb9
         </Form>
       </Modal>
     </>

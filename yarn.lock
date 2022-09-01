@@ -7404,6 +7404,11 @@ react-typed@^1.2.0:
     prop-types "^15.6.0"
     typed.js "^2.0.6"
 
+react-zoom-slider@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-zoom-slider/-/react-zoom-slider-0.1.0.tgz#21e7d13067b963120eb099786620a1f436043afa"
+  integrity sha512-tgZquNXoH5EZa6+6odqh6GOCKmQbl+OsGA6goUyPx8WbkDr2DrvVlBumsEpEupSBPgUi5e4VL/OEAlE+tIIXqw==
+
 react@^18.1.0:
   version "18.1.0"
   resolved "https://registry.yarnpkg.com/react/-/react-18.1.0.tgz#6f8620382decb17fdc5cc223a115e2adbf104890"

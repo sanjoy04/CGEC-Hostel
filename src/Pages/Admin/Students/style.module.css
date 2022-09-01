@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+Table {
+  margin-top: 3rem;
+}
+.table {
+  width: 80%;
+  vertical-align: middle !important;
+  border-radius: 15px !important;
+}
