@@ -30,15 +30,6 @@ export default function Navbar_() {
 
   const [selectedItems, setSelectedItems] = useState("");
 
-  // for signup
-  const [registerName, setRegisterName] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
-  const [registerEmail, setRegisterEmail] = useState("");
-  const [registerPhone, setRegisterPhone] = useState("");
-  const [semester, setSemester] = useState("");
-  const [department, setDepartment] = useState("");
-  const [roll, setRoll] = useState("");
-
   const navigate = useNavigate(); //dynamically redirect to another page
 
   const handleCloseLogin = () => setShow1(false);
