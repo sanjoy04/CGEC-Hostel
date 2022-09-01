@@ -48,7 +48,7 @@ export const AboutText = styled.p`
 export const RowIn1 = styled.div`
   display: flex;
   justify-content: space-between;
-  align-item: center;
+  align-items: center;
   margin: 7rem;
   margin-top: 20rem;
   margin-bottom: 0rem;
@@ -67,7 +67,7 @@ export const RowIn1 = styled.div`
 export const ColRowMain = styled.div`
   display: flex;
   flex-direction: column;
-  align-item: center;
+  align-items: center;
   justify-content: center;
   text-align: center;
   padding: 1rem;
@@ -77,7 +77,7 @@ export const ColRowMain = styled.div`
     rgb(39, 39, 42) -9.77%,
     rgb(24, 24, 27) 110.32%
   );
-  border: 2px solid, red;
+  //border: 2px solid dodgerblue;
   border-radius: 10px;
 
   @media (max-width: 1000px) {
@@ -98,7 +98,7 @@ export const ColRow = styled.div`
 export const RowIn = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  algn-item: center;
+  align-items: center;
   grid-gap: 30px;
   margin: 0 10rem;
   padding: 3rem 0;
@@ -113,7 +113,7 @@ export const RowIn = styled.div`
 export const Col = styled.div`
   display: flex;
   flex-direction: column;
-  text-align: centre;
+  text-align: center;
   // margin-left: 20px;
   grid-gap: 30px;
 `;

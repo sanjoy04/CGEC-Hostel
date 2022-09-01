@@ -13,7 +13,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Nav.css";
 import { API_URL } from "../Constants";
 
-const names = ["Sukanta Chhatrabas - H2", "সুকান্ত ছাত্রাবাস - হোস্টেল ২"];
+const names = ["Sukanta Chhatrabas - H2", "সুকান্ত ছাত্রাবাস - H2"];
 
 export default function Navbar_() {
   const [show1, setShow1] = useState(false);

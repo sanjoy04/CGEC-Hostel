@@ -16,6 +16,7 @@ import Meal from "./Pages/Admin/Meal";
 import RoomChange from "./Pages/Admin/RoomChange";
 import Students from "./Pages/Admin/Students";
 import Admin from "./Pages/Admin";
+import Team from "./Pages/Team";
 
 function App() {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/*" element={<Index />} />
         <Route path="/Facilities" element={<Facilities />} />
         <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/Team" element={<Team />}/>
         <Route path="/admin" element={<Admin />} />
         {/* admin */}
         <Route path="admin">
