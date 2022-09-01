@@ -92,7 +92,15 @@ function Index() {
               );
             })
           ) : (
-            <Spinner className="m-3" animation="grow" variant="light" />
+            <Spinner
+              className="m-3"
+              style={{
+                position: "absolute",
+                left: "48%",
+              }}
+              animation="grow"
+              variant="light"
+            />
           )}
         </tbody>
       </Table>

@@ -34,9 +34,9 @@ function Index() {
             <th className="text-center">Action</th>
           </tr>
         </thead>
-        <tbody>
-          {data ? (
-            data.map((item, index) => {
+        {data ? (
+          <tbody>
+            {data.map((item, index) => {
               return (
                 <tr key={index}>
                   <td className="text-center">{index + 1}</td>
@@ -50,11 +50,19 @@ function Index() {
                   </td>
                 </tr>
               );
-            })
-          ) : (
-            <Spinner className="m-3" animation="grow" variant="light" />
-          )}
-        </tbody>
+            })}
+          </tbody>
+        ) : (
+          <Spinner
+            className="m-3"
+            style={{
+              position: "absolute",
+              left: "48%",
+            }}
+            animation="grow"
+            variant="light"
+          />
+        )}
       </Table>
     </div>
   );
